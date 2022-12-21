@@ -1,0 +1,207 @@
+<article class="single {{post_class}}">
+    <header class="single-header kg-canvas">
+        {{#unless full}}
+            <div class="kg-width-wide single-header-{{width}} {{#if no_image}}kg-width-content{{/if}}{{#if full_half_image}}single-header-full-half{{/if}}">
+                <div class="single-text-wrapper">
+                    {{#is "post"}}
+                        <div class="single-meta">
+                            <span class="single-meta-item single-meta-date">
+                                <time datetime="{{date format="dddd-YYYY-MM-DD"}}">
+                                    {{date published_at format="dddd, MMM DD, YYYY"}}
+                                </time>
+                            </span>
+
+                            <span class="single-meta-item single-meta-length">
+                                {{reading_time}}
+                            </span>
+
+                            {{#primary_tag}}
+                                <span class="single-meta-item single-meta-tag">
+                                    <a class="post-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a>
+                                </span>
+                            {{/primary_tag}}
+                        </div>
+                        {{#tags.[1]}}
+                            <div class="secondary-tag">
+                                <h4 class="card-broweye">{{name}}</h4>
+                            </div>
+                        {{/tags.[1]}}
+                    {{/is}}
+
+                    <h1 class="single-title kg-width-wide">{{title}}</h1>
+
+                    {{#if custom_excerpt}}
+                        <div class="single-excerpt">
+                            {{custom_excerpt}}
+                        </div>
+                    {{/if}}
+
+                    {{#is "post"}}
+                        {{#if @custom.show_author}}
+                            <div class="single-footer-top">
+                                <div class="author-list">
+                                    {{#foreach authors}}
+                                        <div class="author-image-placeholder u-placeholder square">
+                                            <a href="{{url}}" title="{{name}}">
+                                                {{#if profile_image}}
+                                                    <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
+                                                {{else}}
+                                                    <span class="u-object-fit">{{> icons/avatar}}</span>
+                                                {{/if}}
+                                            </a>
+                                        </div>
+                                    {{/foreach}}
+                                    <h4 class="author-name">by {{authors}}</h4>
+                                </div>
+                            </div>
+                        {{/if}}
+                    {{/is}}
+                </div>
+                {{#if feature_image}}
+                    {{#unless no_image}}
+                        <figure class="single-media kg-width-{{width}}">
+                            <img 
+                                srcset="{{> srcset}}" 
+                                sizes="(min-width: 1023px) 920px, calc(90vw)" 
+                                src="{{img_url feature_image size="l"}}" 
+                                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+                                
+                                {{#if feature_image_caption}}
+                                    <figcaption>{{feature_image_caption}}</figcaption>
+                                {{/if}}
+                        </figure>
+                    {{/unless}}
+                {{/if}}
+
+                {{#if no_image}}
+                    <hr class="gh-content-line">
+                {{/if}}
+                
+            </div>
+        {{/unless}}
+
+        {{#if full}}
+            <div class="kg-width-wide single-header-{{width}} {{#if no_image}}kg-width-content{{/if}}">
+                {{#is "post"}}
+                    <div class="single-meta">
+                        <span class="single-meta-item single-meta-date">
+                            <time datetime="{{date format="dddd-YYYY-MM-DD"}}">
+                                {{date published_at format="dddd, MMM DD, YYYY"}}
+                            </time>
+                        </span>
+
+                        <span class="single-meta-item single-meta-length">
+                            {{reading_time}}
+                        </span>
+
+                        {{#primary_tag}}
+                            <span class="single-meta-item single-meta-tag">
+                                <a class="post-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a>
+                            </span>
+                        {{/primary_tag}}
+                    </div>
+                    {{#tags.[1]}}
+                        <div class="secondary-tag">
+                            <h4 class="card-broweye">{{name}}</h4>
+                        </div>
+                    {{/tags.[1]}}
+                {{/is}}
+
+                <h1 class="single-title kg-width-wide">{{title}}</h1>
+
+                {{#if custom_excerpt}}
+                    <div class="single-excerpt">
+                        {{custom_excerpt}}
+                    </div>
+                {{/if}}
+
+                {{#is "post"}}
+                    {{#if @custom.show_author}}
+                        <div class="single-footer-top">
+                            <div class="author-list">
+                                {{#foreach authors}}
+                                    <div class="author-image-placeholder u-placeholder square">
+                                        <a href="{{url}}" title="{{name}}">
+                                            {{#if profile_image}}
+                                                <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
+                                            {{else}}
+                                                <span class="u-object-fit">{{> icons/avatar}}</span>
+                                            {{/if}}
+                                        </a>
+                                    </div>
+                                {{/foreach}}
+                                <h4 class="author-name">by {{authors}}</h4>
+                            </div>
+                        </div>
+                    {{/if}}
+                {{/is}}
+            </div>
+            {{#if feature_image}}
+                {{#unless no_image}}
+                    <figure class="single-media kg-width-{{width}}">
+                        <img 
+                            {{!-- srcset="{{> srcset}}"  --}}
+                            srcset="{{img_url feature_image size="l"}} 750w,
+                                    {{img_url feature_image size="xl"}} 1140w,
+                                    {{img_url feature_image size="xxl"}} 1920w"
+                            sizes="(min-width: 1023px) 920px, 100vw" 
+                            src="{{img_url feature_image size="xxl"}}" 
+                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+                            
+                            {{#if feature_image_caption}}
+                                <figcaption>{{feature_image_caption}}</figcaption>
+                            {{/if}}
+                    </figure>
+                {{/unless}}
+            {{/if}}
+        {{/if}}
+
+    </header>
+
+    <div class="single-content gh-content kg-canvas">
+        {{content}}
+    </div>
+
+    {{#is "post"}}
+        {{#unless @member}}
+            {{^has visibility="members"}}
+                <div class="single-content gh-content kg-canvas">
+                    <div class="single-content-subscription">
+                        {{#if @site.description}}
+                            <div class="single-content-subscription-title">
+                                {{#if @custom.email_signup_text}}
+                                    {{@custom.email_signup_text}}
+                                {{else}}
+                                    {{@site.description}}
+                                {{/if}}
+                            </div>
+                            <p>
+                                {{#if @custom.email_signup_desc}}
+                                    {{@custom.email_signup_desc}}
+                                {{/if}}
+                            </p>
+                        {{/if}}
+
+                        <form class="form-wrapper cover-form" data-members-form>
+                            <input class="auth-email" type="email" data-members-email placeholder="Your email..." required="true" autocomplete="false">
+
+                            {{!-- {{#if @custom.email_signup_small}}
+                                <div class="cover-description-smalltext">{{@custom.email_signup_small}}</div>
+                            {{/if}} --}}
+
+                            <button class="form-button" type="submit" aria-label="Submit">
+                                <span class="default">Just try it</span>
+                                <span class="loader">{{> icons/loader}}</span>
+                                <span class="success">Email sent</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                {{#if @custom.show_share_links}}
+                    {{> content-footer}}
+                {{/if}}
+            {{/has}}
+        {{/unless}}
+    {{/is}}
+</article>

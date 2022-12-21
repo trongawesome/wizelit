@@ -1,0 +1,36 @@
+{{!< default}}
+<div class="content-area">
+    <main class="site-main">
+        {{#tag}}
+            <section class="taxonomy kg-canvas">
+                <header class="single-header kg-width-wide">
+                    {{#if feature_image}}
+                        <div class="taxonomy-media u-placeholder square">
+                            <img class="u-object-fit" src="{{img_url feature_image size="s"}}" alt="{{name}}">
+                        </div>
+                    {{/if}}
+                    <div class="tag-wrapper">
+                        <h1 class="single-title">{{name}}</h1>
+
+                        {{#if description}}
+                            <div class="single-excerpt">{{description}}</div>
+                        {{/if}}
+                    </div>
+                </header>
+            </section>
+        {{/tag}}
+        <div class="content-area">
+            <main class="site-main expanded kg-canvas">
+                <div class="portfolio-feed post-feed kg-grid kg-grid-3col kg-width-wide">
+                    {{#foreach posts}}
+                        {{> "card"}}
+                    {{/foreach}}
+                </div>
+
+                {{pagination}}
+
+            </main>
+        </div>
+    </main>
+</div>
+{{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}

@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Helvetica Now';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../images/fonts/HelveticaNowDisplay-Bold.woff2') format('woff2'),
+        url('../images/fonts/HelveticaNowDisplay-Bold.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Now';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../images/fonts/HelveticaNowDisplay-Medium.woff2') format('woff2'),
+        url('../images/fonts/HelveticaNowDisplay-Medium.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Domaine Text';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../images/fonts/DomaineText-Bold.woff2') format('woff2'),
+        url('../images/fonts/DomaineText-Bold.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Domaine Text';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../images/fonts/DomaineText-Regular.woff2') format('woff2'),
+        url('../images/fonts/DomaineText-Regular.woff') format('woff');
+    font-display: swap;
+}

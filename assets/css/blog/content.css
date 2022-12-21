@@ -1,0 +1,310 @@
+/* Content refers to styling all page and post content that is
+created within the Ghost editor. The main content handles
+headings, text, images and lists. We deal with cards lower down. */
+
+.gh-content {
+    position: relative;
+}
+/* Default vertical spacing */
+.gh-content > * + *,
+.gh-content .kg-grid p {
+    margin-top: 2.8rem;
+    margin-bottom: 0;
+}
+
+/* [id] represents all headings h1-h6, reset all margins */
+.gh-content > [id] {
+    margin: 0;
+}
+
+.has-serif-title .gh-content > [id] {
+    font-family: var(--font-serif);
+}
+
+/* Add back a top margin to all headings, unless a heading
+is the very first element in the post content */
+.gh-content > [id]:not(:first-child) {
+    margin-top: 6.4rem;
+}
+
+/* Add a small margin between a heading and anything after it */
+.gh-content > [id] + * {
+    margin-top: 2rem;
+}
+
+.gh-content > [id] + p {
+    margin-top: 1.2rem;
+}
+
+.gh-content > [id] + .kg-card {
+    margin-top: 2.8rem;
+}
+
+/* A larger margin before/after HRs and blockquotes */
+.gh-content > hr,
+.gh-content > blockquote {
+    position: relative;
+    margin-top: 4.8rem;
+}
+
+.gh-content > hr + *,
+.gh-content > blockquote + * {
+    margin-top: 4.8rem;
+}
+
+.gh-content > hr {
+    border-color: var(--darker-gray-color);
+    display: block;
+    opacity: .1;
+    width: 100%;
+}
+
+.gh-content > hr::after {
+    content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	background-color: var(--background-primary);
+	margin: 0 46%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='8' height='8' fill='none' stroke='%23ffffff90' stroke-width='3px' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+/* Cards */
+.gh-content :not(.kg-card):not([id]) + .kg-card {
+    margin-top: 4.8rem;
+}
+
+.gh-content .kg-card + :not(.kg-card):not([id]) {
+    margin-top: 4.8rem;
+}
+
+.gh-content :not(.kg-card):not([id]) + .kg-card:not(.kg-width-wide):not(.kg-width-full) {
+    margin-top: 3.6rem;
+}
+
+.gh-content .kg-card:not(.kg-width-wide):not(.kg-width-full) + :not(.kg-card):not([id]) {
+    margin-top: 3.6rem;
+}
+
+/* Now the content typography styles */
+.gh-content h1 {
+    font-size: 4rem;
+}
+
+.gh-content h2 {
+    font-size: 4rem;
+    letter-spacing: .004em;
+}
+
+.gh-content h3 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: .004em;
+}
+
+.gh-content h4 {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.gh-content h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.gh-content h6 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-bottom: -6.4rem !important;
+}
+
+.gh-content a {
+    color: var(--ghost-accent-color);
+    /* color: inherit; */
+    text-decoration: underline;
+    word-break: break-word;
+    text-underline-offset: 6px;
+}
+
+.gh-content a[class]:hover {
+    opacity: 1;
+}
+
+.gh-content ol,
+.gh-content ul,
+.gh-content dl,
+.gh-content p {
+    font-size: 2rem;
+    letter-spacing: 0;
+}
+
+.gh-content ul li {
+    margin: 0px -24px 8px;
+    list-style: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='1' viewBox='0 0 14 1' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='0.5' x2='14' y2='0.5' stroke='%235E6AD2'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: 0px 0.9em;
+    padding-left: 24px;
+}
+
+.gh-content ol li {
+    margin-bottom: 8px;
+}
+
+.gh-content .kg-callout-card .kg-callout-text,
+.gh-content .kg-toggle-card .kg-toggle-content ol,
+.gh-content .kg-toggle-card .kg-toggle-content ul,
+.gh-content .kg-toggle-card .kg-toggle-content p,
+.gh-content .kg-product-card .kg-product-card-description ol,
+.gh-content .kg-product-card .kg-product-card-description ul,
+.gh-content .kg-product-card .kg-product-card-description p {
+    font-size: 2rem;
+    letter-spacing: 0;
+}
+
+.has-serif-body .gh-content blockquote,
+.has-serif-body .gh-content ol,
+.has-serif-body .gh-content ul,
+.has-serif-body .gh-content dl,
+.has-serif-body .gh-content p,
+.has-serif-body .gh-content .kg-callout-text,
+.has-serif-body .gh-content .kg-toggle-content ol,
+.has-serif-body .gh-content .kg-toggle-content ul,
+.has-serif-body .gh-content .kg-toggle-content p {
+    font-family: var(--font-serif);
+}
+
+.gh-content ul,
+.gh-content ol,
+.gh-content dl {
+    padding-left: 2.4rem;
+}
+
+.gh-content li + li {
+    margin-top: 1.2rem;
+}
+
+.gh-content-line {
+    border-color: var(--primary-text-color);
+    display: block;
+    width: 100%;
+    /* opacity: .1; */
+    height: 1px;
+    margin: 4vmin 0 3vmin 0;
+    border-top-width: 2px;
+}
+
+.home-post.gh-content-line {
+    margin: 10rem 0 8rem 0;
+}
+
+.tag-hash-util-hide-subscription .single-content-subscription,
+.tag-hash-util-hide-comment .comments-wrapper,
+.tag-hash-util-hide-related .related-wrapper,
+.tag-portfolios .single-content-subscription,
+.tag-portfolios .comments-wrapper,
+.tag-portfolios .single-meta,
+.tag-side-projects .single-meta {
+    display: none;
+}
+
+/* Custom color for special page */
+
+.tag-hash-color-one .single-header,
+.tag-hash-color-one.card-horizontal-wrapper {
+    background-color: var(--custom-color-one);
+}
+
+.tag-hash-color-two .single-header,
+.tag-hash-color-two.card-horizontal-wrapper {
+    background-color: var(--custom-color-two);
+}
+
+.tag-hash-color-three .single-header,
+.tag-hash-color-three.card-horizontal-wrapper {
+    background-color: var(--custom-color-three);
+}
+
+.tag-hash-color-four .single-header,
+.tag-hash-color-four.card-horizontal-wrapper {
+    background-color: var(--custom-color-four);
+}
+
+.tag-hash-color-five .single-header,
+.tag-hash-color-five.card-horizontal-wrapper {
+    background-color: var(--custom-color-five);
+}
+
+.tag-hash-color-six .single-header,
+.tag-hash-color-six.card-horizontal-wrapper {
+    background-color: var(--custom-color-six);
+}
+
+.tag-hash-color-header .site-content {
+    margin-top: calc(-6vmin - 96px);
+}
+
+.tag-hash-color-header .single-header {
+    padding-top: calc(6vmin + 96px);
+}
+
+.tag-hash-color-header .single-header-narrow {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* --- */
+
+.secondary-tag {
+    display: none;
+}
+
+.tag-portfolios .secondary-tag {
+    display: block;
+}
+
+.gh-content .kg-grid .kg-video-card video {
+    border-radius: 32px;
+    box-shadow: 0px 8px 16px var(--mid-gray-color), 0 0 0 4px var(--darker-gray-color);
+    width: 100%;
+}
+
+.gh-content .kg-grid .kg-video-overlay {
+    border-radius: 32px;
+}
+
+@media (max-width: 767px) {
+    
+    .gh-content h2 {
+        font-size: 3rem;
+    }
+    
+    .gh-content h3 {
+        font-size: 2.4rem;
+    }
+    .gh-content ol,
+    .gh-content ul,
+    .gh-content dl,
+    .gh-content p {
+        font-size: 2rem;
+        line-height: 1.66;
+    }
+
+    .gh-content .kg-callout-card .kg-callout-text,
+    .gh-content .kg-toggle-card .kg-toggle-content ol,
+    .gh-content .kg-toggle-card .kg-toggle-content ul,
+    .gh-content .kg-toggle-card .kg-toggle-content p,
+    .gh-content .kg-product-card .kg-product-card-description ol,
+    .gh-content .kg-product-card .kg-product-card-description ul,
+    .gh-content .kg-product-card .kg-product-card-description p {
+        font-size: 2rem;
+        line-height: 1.66;
+    }
+
+}

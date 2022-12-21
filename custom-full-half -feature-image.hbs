@@ -1,0 +1,15 @@
+{{!< default}}
+
+<div class="content-area">
+    <main class="site-main">
+        {{#post}}
+            {{> content full_half_image=true width="narrow"}}
+        {{/post}}
+        {{#is "post"}}
+            {{> comment}}
+            {{> related}}
+        {{/is}}
+    </main>
+</div>
+
+{{#contentFor "body_class"}}{{#if @site.logo}}{{/if}}{{/contentFor}}

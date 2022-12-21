@@ -1,0 +1,113 @@
+{{!< default}}
+
+<div class="content-area">
+    <main class="site-main">
+        
+        {{#page}}
+            {{#unless @member}}
+                <div class='hero-wrapper kg-canvas'>
+                    <div class="kg-width-wide">
+                        <div class='hero-grid hero-grid-2col {{#unless feature_image}}{{/unless}}'>
+                            {{#if feature_image}}
+                            <figure class="hero-image">
+                                <img 
+                                    srcset="{{> srcset}}" 
+                                    sizes="(min-width: 1023px) 920px, calc(90vw)" 
+                                    src="{{img_url feature_image size="l"}}" 
+                                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+                            </figure>
+                            {{/if}}
+
+                            <div class='c-home__content {{#unless feature_image}}c-home__content--only{{/unless}}'>
+                                <section class='hero-content gh-content'>
+                                    
+                                    {{ content }}
+
+                                    {{#unless @member}}
+                                        <form class="form-wrapper cover-form inline-form" data-members-form>
+                                            <input class="auth-email" type="email" data-members-email placeholder="Your email..." required="true" autocomplete="false">
+                                            {{#if @custom.email_signup_small}}
+                                                <div class="cover-description-smalltext">{{@custom.email_signup_small}}</div>
+                                            {{/if}}
+
+                                            <button class="form-button" type="submit" aria-label="Submit">
+                                                <span class="default">Just try it</span>
+                                                <span class="loader">{{> icons/loader}}</span>
+                                                <span class="success">Email sent</span>
+                                            </button>
+                                        </form>
+                                    {{/unless}}
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/unless}}
+        {{/page}}
+        
+        {{#if @custom.show_essay_posts}}
+            <section class="section-wrapper kg-canvas">
+                {{#get "posts" filter="tag:atomic-essay" limit="3"}}
+                    <div class="kg-width-wide">
+                        <header class="feed-header">
+                            <div class="feed-header-wrapper">
+                                <div>
+                                    <h2 class="feed-header-title">Atomic Essays</h2>
+                                    <p class="section-header-subtitle">Opinionated, shortform narrative writting</p>
+                                </div>
+                                <a
+                                    href="./essays/"
+                                    rel="noopener noreferrer">
+                                    More ↗
+                                </a>
+                            </div>
+                        </header>
+                        <div class="portfolio-feed kg-grid kg-grid-3col">
+                            {{#foreach posts}}
+                                {{> card}}
+                            {{/foreach}}
+                        </div>
+                    </div>
+                {{/get}}
+            </section>
+        {{/if}}
+
+        {{#if @custom.show_featured_posts}}
+            <section class="kg-canvas">
+                {{> featured-minimal}}
+            </section>
+        {{/if}}
+
+        <section class="kg-canvas">
+            <div>
+                <header class="feed-header">
+                    {{#if @custom.feed_title}}
+                        <div class="feed-header-wrapper">
+                            <div>
+                                <h2 class="feed-header-title">{{@custom.feed_title}}</h2>
+                                <p class="section-header-subtitle">{{@custom.feed_subtitle}}</p>
+                            </div>
+                            <a class=""
+                                href="./notes/"
+                                rel="noopener noreferrer">
+                                More ↗
+                            </a>
+                        </div>
+                    {{/if}}
+                </header>
+                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}}">
+                    {{#foreach posts}}
+                        {{> "loop"}}
+                    {{/foreach}}
+                </div>
+
+                {{pagination}}
+            </div>
+        </section>
+
+    </main>
+</div>
+
+{{!-- {{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @site.cover_image}} with-alt-header{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}} --}}
+
+{{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}

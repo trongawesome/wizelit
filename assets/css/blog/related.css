@@ -1,0 +1,14 @@
+.related-wrapper {
+    margin-top: 6rem;
+    /* background-color: var(--lighter-gray-color); */
+}
+
+.related-content {
+    border-top: 2px solid var(--primary-text-color);
+    padding: 4.5rem 0 3rem;
+}
+
+.related-title {
+    margin-bottom: 3rem;
+    font-size: 1.9rem;
+}

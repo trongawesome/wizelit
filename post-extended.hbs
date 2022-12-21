@@ -1,0 +1,52 @@
+{{!< default}}
+<div class="content-area">
+    <main class="site-main">
+        {{#tag}}
+            <section class="taxonomy kg-canvas">
+                <header class="single-header kg-width-wide">
+                    {{#if feature_image}}
+                        <div class="taxonomy-media u-placeholder square">
+                            <img class="u-object-fit" src="{{img_url feature_image size="s"}}" alt="{{name}}">
+                        </div>
+                    {{/if}}
+                    <div class="tag-wrapper">
+                        <h1 class="single-title">{{name}}</h1>
+
+                        {{#if description}}
+                            <div class="single-excerpt">{{description}}</div>
+                        {{/if}}
+                    </div>
+                </header>
+            </section>
+        {{/tag}}
+
+        <div class="posts-expanded post-feed">
+            {{#foreach posts}}
+                <article class="single {{post_class}} kg-canvas">
+                    <hr class="home-post gh-content-line kg-width-wide">  
+                    <header class="single-header kg-width-left-sidebar">
+                        <div class="kg-width-content sticky-top">
+                            <div class="single-meta">
+                                <a href="{{url}}" aria-label="{{title}}">
+                                    <span class="single-meta-item single-meta-date">
+                                        <time datetime="{{date format="DD MMM, YYYY dddd"}}">
+                                            {{date published_at format="DD MMM, YYYY dddd"}}
+                                        </time>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </header>
+
+                    <div class="single-content gh-content">
+                        <h2 class="single-title">{{title}}</h2>
+                        {{content}}
+                    </div>
+                </article>
+            {{/foreach}}
+        </div>
+
+    </main>
+</div>
+
+{{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}

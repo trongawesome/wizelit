@@ -1,0 +1,12 @@
+
+{{#post}}
+    {{#if comments}}
+        {{#if access}}
+            <section class="kg-canvas comments-wrapper">
+                <div class="comment-content">
+                    {{comments title="Comments" count=true mode="light" saturation=80}}
+                </div>
+            </section>
+        {{/if}}
+    {{/if}}
+{{/post}}
