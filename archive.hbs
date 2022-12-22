@@ -1,5 +1,4 @@
 {{!< default}}
-
 <div class="content-area">
     <main class="site-main">
         {{#tag}}
@@ -22,19 +21,20 @@
         {{/tag}}
 
         <section class="kg-canvas">
-            {{#get "posts" limit="all"}}
-                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}}">
+            <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}}">
+                {{#get "posts" limit="all"}}
                     {{#foreach posts}}
+                        {{!-- <div class="archive-post-wrap post-year-{{date format="Y"}} js-post-card"> 
+                            <div class="archive-post-label">{{date format="YYYY"}}</div>
+                            {{> "loop"}}
+                        </div> --}}
                         {{> "loop"}}
                     {{/foreach}}
-                </div>
-            {{/get}}
-            {{pagination}}
+                {{/get}}
+            </div>
+            {{!-- {{pagination}} --}}
         </section>
-
     </main>
 </div>
-
-{{!-- {{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @site.cover_image}} with-alt-header{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}} --}}
 
 {{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}

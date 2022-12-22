@@ -11,6 +11,7 @@ routes:
     data: tag.now
   /archive/:
     template: archive
+    controller: channel
     data: tag.archive
 
 collections:
