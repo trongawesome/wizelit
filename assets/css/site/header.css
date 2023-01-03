@@ -112,8 +112,9 @@
     padding: 1rem 0;
     width: 170px;
     text-align: left;
-    background-color: var(--darker-gray-color);
+    background-color: var(--white-color);
     border-radius: 5px;
+    box-shadow: var(--box-shadow-dreamy);
 }
 
 .sub-menu::before {
@@ -124,17 +125,18 @@
     width: 0;
     height: 0;
     border-right: 7px solid transparent;
-    border-bottom: 7px solid var(--darker-gray-color);
+    border-bottom: 7px solid var(--white-color);
     border-left: 7px solid transparent;
 }
 
 .sub-menu .menu-item {
     display: block;
     padding: 0.7rem 1.5rem;
-    color: var(--white-color) !important;
+    /* color: var(--white-color); */
 }
 
-.sub-menu .menu-item + .menu-item {
+.sub-menu .menu-item + .menu-item,
+.header-actions .sub-menu .menu-item + .menu-item {
     margin-left: 0;
 }
 
