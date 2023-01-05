@@ -215,13 +215,16 @@
     row-gap: 56px;
     grid-template-columns: 30% 1fr;
     height: 620px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: saturate(180%) blur(20px);
     margin-bottom: 5.6rem;
     position: sticky;
     top: 8px;
     left: 0;
     box-shadow: var(--box-shadow-dreamy);
     transition: all .3s ease-in-out;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .card-horizontal-wrapper:hover {

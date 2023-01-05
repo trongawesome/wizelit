@@ -16,7 +16,8 @@
     --twitter-color: #1da1f2;
     --rss-color: #f26522;
     --animation-base: ease-in-out;
-    /* --background-color: #f0edf6; */
+    --background-color: #f0edf6;
+    --background-color-gradient: linear-gradient(180deg,transparent,hsla(0,0%,95%,.29) 47.39%,#fff),linear-gradient(90deg,#f9ddf1 .07%,#e5e1ff 16.73%,#daedff 34.48%,#e2f4e3 49.98%,#ebf5d8 66.12%,#faf2da 81.95%,#fbe5d8 99.9%);
     --divider-color: rgb(0 0 0 / 3%);
     --muted-background-color: rgb(250 250 250 / 40%);
     /* --font-base: sans-serif; */
@@ -65,7 +66,8 @@ body {
     font-size: 1.6rem;
     line-height: 1.7;
     text-rendering: optimizeLegibility;
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+    background: var(--background-color-gradient);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

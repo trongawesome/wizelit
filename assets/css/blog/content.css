@@ -214,6 +214,10 @@ is the very first element in the post content */
     display: none;
 }
 
+body.post-template.tag-portfolios {
+    background: var(--background-color);
+}
+
 /* Custom color for special page */
 
 .tag-hash-color-one .single-header,

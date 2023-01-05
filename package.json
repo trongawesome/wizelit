@@ -40,10 +40,6 @@
         },
         "card_assets": true,
         "custom": {
-            "background_color": {
-                "type": "color",
-                "default": "#ffffff"
-            },
             "title_font": {
                 "type": "select",
                 "options": [

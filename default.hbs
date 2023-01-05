@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
 
-    <style>
+    {{!-- <style>
         :root {
             --background-color: {{@custom.background_color}}
         }
-    </style>
+    </style> --}}
 
-    <script>
+    {{!-- <script>
         /* The script for calculating the color contrast was taken from
         https://gomakethings.com/dynamically-changing-the-text-color-based-on-background-color-contrast-with-vanilla-js/ */
         var accentColor = getComputedStyle(document.documentElement).getPropertyValue('--background-color');
@@ -24,7 +24,7 @@
         var textColor = (yiq >= 128) ? 'dark' : 'light';
 
         document.documentElement.className = `has-${textColor}-text`;
-    </script>
+    </script> --}}
 
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
