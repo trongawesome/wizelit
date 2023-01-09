@@ -221,32 +221,32 @@ body.post-template.tag-portfolios {
 /* Custom color for special page */
 
 .tag-hash-color-one .single-header,
-.tag-hash-color-one.card-horizontal-wrapper {
+.tag-hash-color-one.card-horizontal-wrapper:hover {
     background-color: var(--custom-color-one);
 }
 
 .tag-hash-color-two .single-header,
-.tag-hash-color-two.card-horizontal-wrapper {
+.tag-hash-color-two.card-horizontal-wrapper:hover {
     background-color: var(--custom-color-two);
 }
 
 .tag-hash-color-three .single-header,
-.tag-hash-color-three.card-horizontal-wrapper {
+.tag-hash-color-three.card-horizontal-wrapper:hover {
     background-color: var(--custom-color-three);
 }
 
 .tag-hash-color-four .single-header,
-.tag-hash-color-four.card-horizontal-wrapper {
+.tag-hash-color-four.card-horizontal-wrapper:hover {
     background-color: var(--custom-color-four);
 }
 
 .tag-hash-color-five .single-header,
-.tag-hash-color-five.card-horizontal-wrapper {
+.tag-hash-color-five.card-horizontal-wrapper:hover {
     background-color: var(--custom-color-five);
 }
 
 .tag-hash-color-six .single-header,
-.tag-hash-color-six.card-horizontal-wrapper {
+.tag-hash-color-six.card-horizontal-wrapper:hover {
     background-color: var(--custom-color-six);
 }
 
