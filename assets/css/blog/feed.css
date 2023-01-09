@@ -490,7 +490,7 @@
 @media (max-width: 767px) {
     .card-horizontal-wrapper {
         grid-template-columns: 1fr;
-        height: 750px;
+        height: 700px;
         row-gap: 0;
     }
 
