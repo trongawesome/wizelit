@@ -7,7 +7,7 @@ routes:
   /diary/:
     template: post-extended
     controller: channel
-    filter: primary_tag:now
+    filter: tag:now
     data: tag.now
   /archive/:
     template: archive
