@@ -482,6 +482,57 @@
     border-radius: 20rem 20rem 20rem 0 ;
 }
 
+/* Grid Card */
+.card-grid-wrapper {
+    background-color: var(--lighter-gray-color);
+    height: 320px;
+    border-radius: 12px;
+    position: relative;
+    padding: 0;
+}
+
+.post-feed .featured.card-grid-wrapper {
+    grid-column: span 2/span 2;
+}
+
+.card-grid-wrapper.feed {
+    border-top: none;
+}
+
+.post-feed .card-grid-wrapper .feed-date {
+    display: block;
+}
+
+.card-grid-wrapper .feed-date {
+    padding-bottom: 8px;
+}
+
+.card-grid-wrapper .feed-right time {
+    padding-right: 4px;
+}
+
+.text-group {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 60% 24px 24px 24px;
+    width: 100%;
+    background: linear-gradient(204.89deg, rgba(255, 255, 255, 0) 13.76%, rgba(255, 255, 255, 0.0086472) 18.25%, rgba(255, 255, 255, 0.03551) 22.74%, rgba(255, 255, 255, 0.0816599) 27.24%, rgba(255, 255, 255, 0.147411) 31.73%, rgba(255, 255, 255, 0.231775) 36.22%, rgba(255, 255, 255, 0.331884) 40.72%, rgba(255, 255, 255, 0.442691) 45.21%, rgba(255, 255, 255, 0.557309) 49.7%, rgba(255, 255, 255, 0.668116) 54.2%, rgba(255, 255, 255, 0.768225) 58.69%, rgba(255, 255, 255, 0.852589) 63.18%, rgba(255, 255, 255, 0.91834) 67.68%, rgba(255, 255, 255, 0.96449) 72.17%, rgba(255, 255, 255, 0.991353) 76.67%, #FFFFFF 81.16%);
+}
+
+.card-grid-wrapper .card-title {
+    font-size: 22px;
+}
+
+.cover-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0 !important;
+}
+
 /* Archive page */
 .post-date-2014+.post-date-2014 .archive-post-label, .post-year-2015+.post-year-2015 .archive-post-label, .post-year-2016+.post-year-2016 .archive-post-label, .post-year-2017+.post-year-2017 .archive-post-label, .post-year-2018+.post-year-2018 .archive-post-label, .post-year-2019+.post-year-2019 .archive-post-label, .post-year-2020+.post-year-2020 .archive-post-label, .post-year-2021+.post-year-2021 .archive-post-label, .post-year-2022+.post-year-2022 .archive-post-label, .post-year-2023+.post-year-2023 .archive-post-label, .post-year-2024+.post-year-2024 .archive-post-label, .post-year-2025+.post-year-2025 .archive-post-label {
     display: none;
@@ -533,6 +584,10 @@
 
     .posts-expanded .single-header {
         margin-bottom: 0;
+    }
+
+    .card-grid-wrapper {
+        height: 400px;
     }
 
 }

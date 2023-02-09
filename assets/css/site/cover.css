@@ -157,6 +157,8 @@
     grid-gap: 64px;
     background-color: var(--white-color);
     align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .hero-grid-2col {

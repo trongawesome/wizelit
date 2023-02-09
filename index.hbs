@@ -47,7 +47,7 @@
         
         {{#if @custom.show_essay_posts}}
             <section class="section-wrapper kg-canvas">
-                {{#get "posts" filter="tag:atomic-essay" limit="3"}}
+                {{#get "posts" filter="tag:atomic-essay" limit="4"}}
                     <div class="kg-width-wide">
                         <header class="feed-header">
                             <div class="feed-header-wrapper">
@@ -62,9 +62,9 @@
                                 </a>
                             </div>
                         </header>
-                        <div class="portfolio-feed kg-grid kg-grid-3col">
+                        <div class="portfolio-feed kg-grid-minimal kg-grid-4col">
                             {{#foreach posts}}
-                                {{> card}}
+                                {{> card-grid}}
                             {{/foreach}}
                         </div>
                     </div>

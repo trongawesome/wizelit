@@ -130,6 +130,12 @@ blockquote.kg-blockquote-alt::after {
     row-gap: 56px;
 }
 
+.kg-grid-minimal {
+    display: grid;
+    column-gap: 16px;
+    row-gap: 16px;
+}
+
 .kg-page-content {
     grid-column: wide-start/main-end;
 }
@@ -156,6 +162,10 @@ blockquote.kg-blockquote-alt::after {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.kg-grid-4col {
+    grid-template-columns: repeat(4,minmax(0, 1fr));
+}
+
 @media (max-width: 767px) {
     .kg-grid-1col-mobile {
         grid-template-columns: 1fr;
@@ -166,6 +176,9 @@ blockquote.kg-blockquote-alt::after {
     .kg-grid-3col {
         grid-template-columns: 1fr 1fr;
     }
+    .kg-grid-4col {
+        grid-template-columns: repeat(2,minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 575px) {
@@ -173,5 +186,9 @@ blockquote.kg-blockquote-alt::after {
     .kg-grid-2col,
     .kg-grid-2col-shortleft {
         grid-template-columns: 1fr;
+    }
+
+    .kg-grid-4col {
+        grid-template-columns: repeat(1,minmax(0, 1fr));
     }
 }

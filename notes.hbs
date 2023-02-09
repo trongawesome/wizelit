@@ -20,27 +20,33 @@
             </section>
         {{/tag}}
                 
-        <section class="kg-canvas">
+        {{!-- <section class="kg-canvas">
             {{> featured-minimal}}
-        </section>
+        </section> --}}
 
         <section class="kg-canvas">
-            <header class="feed-header">
+            {{!-- <header class="feed-header">
                 {{#if @custom.feed_title}}
                     <div class="feed-header-wrapper">
                         <h2 class="feed-header-title">{{@custom.feed_title}}</h2>
                     </div>
                 {{/if}}
-            </header>
+            </header> --}}
 
-            <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}}">
+            {{!-- <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} kg-grid-minimal kg-grid-4col">
             
                 {{#foreach posts}}
-                    {{> "loop"}}
+                    {{> "card-grid"}}
                 {{/foreach}}
                 
-                {{pagination}}
+            </div> --}}
+
+            <div class="post-feed kg-grid-minimal kg-grid-4col kg-width-wide">
+                {{#foreach posts}}
+                    {{> "card-grid"}}
+                {{/foreach}}
             </div>
+            {{pagination}}
         </section>
 
     </main>

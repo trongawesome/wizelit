@@ -1,0 +1,26 @@
+<article class="{{post_class}} card-grid-wrapper feed">
+    {{#if feature_image}}
+        <div class="u-placeholder cover-image">
+            <img class="u-object-fit"
+                srcset="{{> srcset}}"
+                sizes="(min-width: 1256px) calc((1130px - 60px) / 2), (min-width: 992px) calc((90vw - 60px) / 2), (min-width: 768px) calc((90vw - 30px) / 2), 90vw"
+                src="{{img_url feature_image size="m"}}"
+                alt="{{title}}" loading="lazy">
+        </div>
+    {{/if}}
+
+    <div class="text-group">
+        <div class="feed-right">
+            <time class="feed-date" datetime="{{date format="YYYY-MM-DD"}}">
+                {{date published_at}}
+            </time>
+            {{#primary_tag}}
+                <span class="feed-date">
+                     — {{name}}
+                </span>
+            {{/primary_tag}}
+        </div>
+        <h3 class="card-title">{{title}}</h3>
+    </div>
+    <a class="u-permalink" href={{url}} aria-label="{{title}}"></a>
+</article>
