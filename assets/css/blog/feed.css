@@ -590,4 +590,8 @@
         height: 400px;
     }
 
+    .post-feed .featured.card-grid-wrapper {
+        grid-column: span 1;
+    }
+
 }
