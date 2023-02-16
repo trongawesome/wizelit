@@ -20,5 +20,5 @@
             {{reading_time}}
         </div>
     </div>
-    <a class="u-permalink" href={{url}} aria-label="{{title}}"></a>
+    <a class="u-permalink" href={{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}} aria-label="{{title}}"></a>
 </article>
