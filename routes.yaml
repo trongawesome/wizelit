@@ -18,7 +18,7 @@ collections:
   /essays/:
     permalink: /{slug}/
     template: essays
-    filter: 'tag:atomic-essay'
+    filter: tag:atomic-essay
     data: tag.atomic-essay
   /works/:
     permalink: /{slug}/
