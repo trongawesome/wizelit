@@ -66,8 +66,11 @@ body {
     font-size: 1.6rem;
     line-height: 1.7;
     text-rendering: optimizeLegibility;
-    /* background-color: var(--background-color); */
-    background: var(--background-color-gradient);
+    /* background: var(--background-color-gradient); */
+    background-color: var(--background-color);
+
+    /* background: url('../images/abstract18.png') left bottom no-repeat, var(--background-color);
+    background-size: 100% auto; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
