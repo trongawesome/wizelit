@@ -177,6 +177,11 @@ blockquote.kg-blockquote-alt::after {
         ". featured-center featured-center ."
 }
 
+.kg-grid-4col-minimal {
+    grid-template-columns: repeat(4,minmax(0, 1fr));
+    grid-auto-flow: row dense;
+}
+
 @media (max-width: 767px) {
     .kg-grid-1col-mobile {
         grid-template-columns: 1fr;
@@ -197,6 +202,9 @@ blockquote.kg-blockquote-alt::after {
             "featured-right featured-right"
 
     }
+    .kg-grid-4col-minimal {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 575px) {
@@ -209,5 +217,9 @@ blockquote.kg-blockquote-alt::after {
     .kg-grid-4col {
         grid-template-columns: 1fr;
         grid-template-areas: none;
+    }
+
+    .kg-grid-4col-minimal {
+        grid-template-columns: 1fr;
     }
 }

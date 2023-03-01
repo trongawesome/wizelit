@@ -532,6 +532,10 @@
     font-size: 20px;
 }
 
+.kg-grid-4col-minimal .feed-excerpt {
+    display: none;
+}
+
 .cover-image {
     position: absolute;
     left: 0;
