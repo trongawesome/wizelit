@@ -21,6 +21,9 @@
             {{/primary_tag}}
         </div>
         <h3 class="card-title">{{title}}</h3>
+        {{#if excerpt}}
+            <div class="feed-excerpt">{{excerpt words="20"}}</div>
+        {{/if}}
     </div>
     <a class="u-permalink" href={{url}} aria-label="{{title}}"></a>
 </article>
