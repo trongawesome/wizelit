@@ -1,4 +1,9 @@
 routes:
+  /notes/:
+    template: notes
+    controller: channel
+    filter: 'tag:notes'
+    data: tag.notes
   /diary/:
     template: post-extended
     controller: channel
@@ -15,11 +20,6 @@ collections:
     template: essays
     filter: tag:atomic-essay
     data: tag.atomic-essay
-  /notes/:
-    permalink: /{slug}/
-    template: notes
-    filter: tag:[atomic-essay,notes]
-    data: tag.notes
   /works/:
     permalink: /{slug}/
     template: portfolios
