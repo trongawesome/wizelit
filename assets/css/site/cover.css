@@ -50,16 +50,22 @@
     text-align: center;
 }
 
+.site-main-hero {
+    margin-bottom: 80px;
+}
+
 .cover-description {
-    font-size: 3rem;
-    line-height: 1.3;
+    font-size: 7rem;
+    line-height: 1.1;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .cover-description-subtext {
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 1.5;
     margin-top: 1rem;
+    margin-bottom: 20px;
 }
 
 .cover-description-smalltext {

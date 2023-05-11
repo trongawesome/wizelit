@@ -52,3 +52,8 @@
     animation-name: zoomOut;
     animation-duration: 0.3s;
 }
+
+@keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+}

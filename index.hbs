@@ -2,10 +2,31 @@
 
 <div class="content-area">
     <main class="site-main">
-        
         {{#page}}
-            {{#unless @member}}
-                <div class='hero-wrapper kg-canvas'>
+            <div class="site-main-hero kg-canvas kg-page-content">
+                {{#if @site.description}}
+                    <h1 class="cover-description">{{@site.description}}</h1>
+                {{/if}}
+                {{#if @custom.site_desc}}
+                    <p class="cover-description-subtext">{{@custom.site_desc}}</p>
+                {{/if}}
+
+                {{#unless @member}}
+                    <form class="form-wrapper cover-form inline-form" data-members-form>
+                        <input class="auth-email" type="email" data-members-email placeholder="Your email..." required="true" autocomplete="false">
+                        {{#if @custom.email_signup_small}}
+                            <div class="cover-description-smalltext">{{@custom.email_signup_small}}</div>
+                        {{/if}}
+
+                        <button class="form-button" type="submit" aria-label="Submit">
+                            <span class="default">Just try it</span>
+                            <span class="loader">{{> icons/loader}}</span>
+                            <span class="success">Email sent</span>
+                        </button>
+                    </form>
+                {{/unless}}
+            </div>
+                {{!-- <div class='hero-wrapper kg-canvas'>
                     <div class="kg-width-wide">
                         <div class='hero-grid hero-grid-2col {{#unless feature_image}}{{/unless}}'>
                             {{#if feature_image}}
@@ -41,8 +62,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            {{/unless}}
+                </div> --}}
         {{/page}}
 
         {{#get "posts" limit="16"}}
@@ -53,6 +73,16 @@
                     {{/foreach}}
                 </div>
             </section>
+            <div class="kg-canvas kg-page-content">
+                <div>
+                 <a class="button button-secondary"
+                        href="/" target="_blank"
+                        rel="noopener noreferrer" aria-label="View all books">
+                    <span class="default">View all books</span>
+                    {{> icons/arrow-right}}
+                </a>
+                </div>
+            </div>
         {{/get}}
 
     </main>

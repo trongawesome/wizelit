@@ -64,7 +64,7 @@
                 "type": "text",
                 "group": "homepage"
             },
-            "email_signup_small": {
+            "site_desc": {
                 "type": "text",
                 "group": "homepage"
             },

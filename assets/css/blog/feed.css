@@ -445,6 +445,10 @@
     /* z-index: 1000; */
 }
 
+.card-wrapper.feed .u-placeholder {
+    border-radius: 8px;
+}
+
 .card-wrapper.feed .feed-excerpt,
 .card-wrapper.feed .feed-date{
     display: block;

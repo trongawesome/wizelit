@@ -179,11 +179,6 @@ blockquote.kg-blockquote-alt::after {
     animation: marquee 100s linear infinite;
 }
 
-@keyframes marquee {
-    0% { left: 0; }
-    100% { left: -100%; }
-}
-
 @media (max-width: 767px) {
     .kg-grid-1col-mobile {
         grid-template-columns: 1fr;
