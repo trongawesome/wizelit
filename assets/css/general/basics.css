@@ -35,6 +35,7 @@
     --custom-color-four: #A4BEB2;
     --custom-color-five: #A9BED3;
     --custom-color-six: rgb(13, 13, 13);
+    --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 :root.has-light-text {

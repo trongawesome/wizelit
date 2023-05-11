@@ -8,17 +8,6 @@
                 alt="{{title}}" loading="lazy">
         </div>
     {{/if}}
-    <h3 class="card-title">{{title}}</h3>
-    {{#if excerpt}}
-        <div class="feed-excerpt">{{excerpt words="20"}}</div>
-    {{/if}}
-    <div class="feed-right">
-        <time class="feed-date" datetime="{{date format="YYYY-MM-DD"}}">
-            {{date published_at}}
-        </time>
-        <div class="feed-length">
-            {{reading_time}}
-        </div>
-    </div>
+    {{!-- <h3 class="card-title">{{title}}</h3> --}}
     <a class="u-permalink" href={{url}} aria-label="{{title}}"></a>
 </article>

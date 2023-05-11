@@ -44,70 +44,18 @@
                 </div>
             {{/unless}}
         {{/page}}
-        
-        {{#if @custom.show_essay_posts}}
-            <section class="section-wrapper kg-canvas">
-                {{#get "posts" filter="tag:atomic-essay" limit="3"}}
-                    <div class="kg-width-wide">
-                        <header class="feed-header">
-                            <div class="feed-header-wrapper">
-                                <div>
-                                    <h2 class="feed-header-title">Atomic Essays</h2>
-                                    <p class="section-header-subtitle">Opinionated, shortform narrative writting</p>
-                                </div>
-                                <a
-                                    href="./essays/"
-                                    rel="noopener noreferrer">
-                                    More ↗
-                                </a>
-                            </div>
-                        </header>
-                        <div class="portfolio-feed kg-grid kg-grid-3col">
-                            {{#foreach posts}}
-                                {{> card}}
-                            {{/foreach}}
-                        </div>
-                    </div>
-                {{/get}}
-            </section>
-        {{/if}}
 
-        {{#if @custom.show_featured_posts}}
-            <section class="kg-canvas">
-                {{> featured-minimal}}
-            </section>
-        {{/if}}
-
-        <section class="kg-canvas">
-            <div>
-                <header class="feed-header">
-                    {{#if @custom.feed_title}}
-                        <div class="feed-header-wrapper">
-                            <div>
-                                <h2 class="feed-header-title">{{@custom.feed_title}}</h2>
-                                <p class="section-header-subtitle">{{@custom.feed_subtitle}}</p>
-                            </div>
-                            <a class=""
-                                href="./notes/"
-                                rel="noopener noreferrer">
-                                More ↗
-                            </a>
-                        </div>
-                    {{/if}}
-                </header>
-                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}}">
-                    {{#foreach posts}}
-                        {{> "loop"}}
+        {{#get "posts" limit="16"}}
+            <section class="book-slider-outer">
+                <div class="book-slider-inner kg-grid kg-grid-xcol">
+                        {{#foreach posts}}
+                        {{> card-horizontal}}
                     {{/foreach}}
                 </div>
-
-                {{pagination}}
-            </div>
-        </section>
+            </section>
+        {{/get}}
 
     </main>
 </div>
-
-{{!-- {{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @site.cover_image}} with-alt-header{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}} --}}
 
 {{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}

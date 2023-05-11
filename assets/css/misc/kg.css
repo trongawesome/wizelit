@@ -100,6 +100,10 @@ blockquote.kg-blockquote-alt::after {
         [full-end];
 }
 
+.kg-canvas-fluid {
+    padding: 0 80px;
+}
+
 .kg-canvas > * {
     grid-column: main-start/main-end;
 }
@@ -126,8 +130,8 @@ blockquote.kg-blockquote-alt::after {
 
 .kg-grid {
     display: grid;
-    column-gap: 40px;
-    row-gap: 56px;
+    column-gap: 24px;
+    row-gap: 24px;
 }
 
 .kg-page-content {
@@ -154,6 +158,30 @@ blockquote.kg-blockquote-alt::after {
 
 .kg-grid-3col {
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.kg-grid-4col {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.kg-grid-xcol {
+    grid-template-columns: repeat(16, 400px);
+}
+
+.book-slider-outer {
+    position: relative;
+    overflow-x: hidden;
+    padding: 40px 80px;
+}
+
+.book-slider-inner {
+    position: relative;
+    animation: marquee 100s linear infinite;
+}
+
+@keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
 }
 
 @media (max-width: 767px) {

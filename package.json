@@ -84,8 +84,7 @@
                     "Expanded",
                     "Right thumbnail",
                     "Text-only",
-                    "Minimal",
-                    "Vertical big"
+                    "Minimal"
                 ],
                 "default": "Expanded",
                 "group": "homepage"
@@ -111,8 +110,7 @@
                     "Expanded",
                     "Right thumbnail",
                     "Text-only",
-                    "Minimal",
-                    "Vertical big"
+                    "Minimal"
                 ],
                 "default": "Expanded",
                 "group": "homepage"

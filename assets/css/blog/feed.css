@@ -437,15 +437,17 @@
     display: block;
     border-top: none;
     padding: 0;
+    transition: all 0.2s var(--ease-in-out-quad);
+}
+
+.card-wrapper.feed:hover {
+    transform: scale(1.08);
+    /* z-index: 1000; */
 }
 
 .card-wrapper.feed .feed-excerpt,
 .card-wrapper.feed .feed-date{
     display: block;
-}
-
-.card-wrapper .u-placeholder {
-    margin-bottom: 28px;
 }
 
 .card-wrapper .feed-excerpt {
@@ -455,31 +457,6 @@
 .card-text-wrapper {
     padding: 0 0 0 6rem;
     align-self: center;
-}
-
-/* Free shape for card */
-.card-wrapper:nth-of-type(n) .u-placeholder {
-    border-radius: 20rem 20rem 0 0 ;
-}
-
-.card-wrapper:nth-of-type(2n) .u-placeholder {
-    border-radius: 0 0 20rem 0 ;
-}
-
-.card-wrapper:nth-of-type(3n) .u-placeholder {
-    border-radius: 20rem 0 20rem 0 ;
-}
-
-.card-wrapper:nth-of-type(6n) .u-placeholder {
-    border-radius: 20rem 0 0 0 ;
-}
-
-.card-wrapper:nth-of-type(4n) .u-placeholder {
-    border-radius: 20rem 0 0 0 ;
-}
-
-.card-wrapper:nth-of-type(5n) .u-placeholder {
-    border-radius: 20rem 20rem 20rem 0 ;
 }
 
 /* Archive page */
