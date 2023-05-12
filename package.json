@@ -81,11 +81,6 @@
                 "default": "Latest Evergreen Notes",
                 "group": "homepage"
             },
-            "feed_subtitle": {
-                "type": "text",
-                "default": "Loose, unopinionated notes on things I don’t entirely understand yet.",
-                "group": "homepage"
-            },
             "feed_layout": {
                 "type": "select",
                 "options": [

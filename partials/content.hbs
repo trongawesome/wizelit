@@ -167,21 +167,6 @@
             {{^has visibility="members"}}
                 <div class="single-content gh-content kg-canvas">
                     <div class="single-content-subscription">
-                        {{#if @site.description}}
-                            <div class="single-content-subscription-title">
-                                {{#if @custom.email_signup_text}}
-                                    {{@custom.email_signup_text}}
-                                {{else}}
-                                    {{@site.description}}
-                                {{/if}}
-                            </div>
-                            <p>
-                                {{#if @custom.email_signup_desc}}
-                                    {{@custom.email_signup_desc}}
-                                {{/if}}
-                            </p>
-                        {{/if}}
-
                         <form class="form-wrapper cover-form" data-members-form>
                             <input class="auth-email" type="email" data-members-email placeholder="Your email..." required="true" autocomplete="false">
 

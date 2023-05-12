@@ -1,14 +1,12 @@
 {{#get "posts" filter="featured:true+tag:-atomic-essay" limit="3" as |featured|}}
     {{#if featured}}
         <header class="feed-header">
-            {{#if @custom.featured_title}}
-                <div class="feed-header-wrapper">
-                    <h2 class="feed-header-title">{{@custom.featured_title}}</h2>
-                </div>
-            {{/if}}
+            <div class="feed-header-wrapper">
+                <h2 class="feed-header-title"></h2>
+            </div>
         </header>
 
-        <div class="content-feed{{#match @custom.featured_feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.featured_feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.featured_feed_layout "Text-only"}} text-only{{/match}}">
+        <div class="content-feed">
             {{#foreach featured}}
                     {{> "loop-featured"}}
             {{/foreach}}
