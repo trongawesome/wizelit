@@ -5,7 +5,7 @@
     padding: 0 20px;
     height: 48px;
     outline: none;
-    border: 1px solid var(--light-gray-color);
+    border: 1px solid var(--mid-gray-color);
     color: var(--brand-color);
     font-family: var(--font-base);
     font-size: 1.8rem;
@@ -15,10 +15,11 @@
     background-color: var(--white-color);
     border-radius: 6px;
     cursor: pointer;
+    transition: all 0.25s var(--ease-in-out-quad);
 }
 
 .button:hover {
-    border-color: var(--mid-gray-color);
+    border-color: var(--darker-gray-color);
     opacity: 1;
 }
 
@@ -27,7 +28,11 @@
 }
 
 .button-secondary {
-    color: var(--darker-gray-color);
+    color: var(--dark-gray-color);
+}
+
+.button-secondary:hover {
+    color: var( --primary-text-color);
 }
 
 .button-icon {

@@ -1,0 +1,11 @@
+<div class="people-card">
+    <a href={{url}} aria-label="{{name}}">
+        {{#if profile_image}}
+            <div class="u-placeholder vertical">
+                <img class="u-object-fit" src="{{img_url profile_image size="s"}}" alt="{{name}}">
+            </div>
+        {{/if}}
+        <h3 class="people-card-title">{{name}}</h3>
+        <p class="card-small-text">{{ count.posts }} books</p>
+    </a>
+</div>

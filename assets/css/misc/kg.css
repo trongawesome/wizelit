@@ -94,7 +94,7 @@ blockquote.kg-blockquote-alt::after {
     grid-template-columns:
         [full-start] minmax(4vw,auto) 
         [wide-start] minmax(auto,320px) 
-        [main-start] min(640px,calc(100% - 8vw)) 
+        [main-start] min(700px,calc(100% - 8vw)) 
         [main-end] minmax(auto,320px) 
         [wide-end] minmax(4vw,auto) 
         [full-end];
@@ -166,6 +166,10 @@ blockquote.kg-blockquote-alt::after {
 
 .kg-grid-xcol {
     grid-template-columns: repeat(16, 400px);
+}
+
+.kg-site-margin {
+    margin: 0 80px;
 }
 
 .book-slider-outer {

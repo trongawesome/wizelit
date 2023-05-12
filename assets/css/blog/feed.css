@@ -440,12 +440,12 @@
     transition: all 0.2s var(--ease-in-out-quad);
 }
 
-.card-wrapper.feed:hover {
+.book-slider-inner .card-wrapper.feed:hover {
     transform: scale(1.08);
-    /* z-index: 1000; */
 }
 
-.card-wrapper.feed .u-placeholder {
+.card-wrapper.feed .u-placeholder,
+.people-card .u-placeholder {
     border-radius: 8px;
 }
 
@@ -461,6 +461,36 @@
 .card-text-wrapper {
     padding: 0 0 0 6rem;
     align-self: center;
+}
+
+.people-recommend-list {
+    margin: 4.8rem 0 3.2rem 0;
+}
+
+.people-card {
+    margin-bottom: 1.6rem;
+}
+
+.people-card-title {
+    text-align: center;
+    margin: 16px 0 4px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.has-serif-title .people-card-title {
+    font-family: var(--font-serif);
+}
+
+
+.card-small-text {
+    font-size: 1.6rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.has-serif-body .card-small-text {
+    font-family: var(--font-serif);
 }
 
 /* Archive page */
