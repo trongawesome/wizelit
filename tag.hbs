@@ -23,10 +23,12 @@
         {{/tag}}
 
         <div class="kg-canvas">
-            <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}}">
-                {{#foreach posts}}
-                    {{> "loop"}}
-                {{/foreach}}
+            <div class="kg-width-full kg-site-margin">
+                <div class="kg-grid kg-grid-4col">
+                    {{#foreach posts}}
+                        {{> card-horizontal}}
+                    {{/foreach}}
+                </div>
             </div>
         </div>
 
