@@ -3,7 +3,112 @@
 <div class="content-area">
     <main class="site-main">
         {{#post}}
-            {{> content width="narrow"}}
+            <article class="single {{post_class}}">
+                <header class="single-header kg-canvas">
+                        <div class="kg-width-full">
+                            {{#if feature_image}}
+                                <div class="single-media-wrap-book" style="background-color: {{primary_tag.accent_color}}">
+                                    <figure class="single-media-book">
+                                        <img 
+                                            srcset="{{> srcset}}" 
+                                            sizes="(min-width: 1023px) 920px, calc(90vw)" 
+                                            src="{{img_url feature_image size="l"}}" 
+                                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+                                            
+                                            {{#if feature_image_caption}}
+                                                <figcaption>{{feature_image_caption}}</figcaption>
+                                            {{/if}}
+                                    </figure>
+                                </div>
+                            {{/if}}
+
+                            <div class="single-text-wrapper-book">
+                                <div class="kg-canvas">
+                                    <div class="kg-width-wide">
+                                        {{#is "post"}}
+                                            <div class="single-meta">
+                                                <span class="single-meta-item single-meta-length">
+                                                    {{reading_time}}
+                                                </span>
+                                                {{#primary_tag}}
+                                                    <span class="single-meta-item single-meta-tag">
+                                                        <a class="post-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a>
+                                                    </span>
+                                                {{/primary_tag}}
+                                            </div>
+                                            {{#tags.[1]}}
+                                                <div class="secondary-tag">
+                                                    <h4 class="card-broweye">{{name}}</h4>
+                                                </div>
+                                            {{/tags.[1]}}
+                                        {{/is}}
+
+                                        <h1 class="single-title kg-width-wide">{{title}}</h1>
+
+                                        {{#if custom_excerpt}}
+                                            <div class="single-excerpt">
+                                                {{custom_excerpt}}
+                                            </div>
+                                        {{/if}}
+
+                                        {{#is "post"}}
+                                            {{#if @custom.show_author}}
+                                                <div class="single-footer-top">
+                                                    <h4 class="author-name-label">In the recommended reading list of</h4>
+                                                    <div class="author-list-book">
+                                                        {{#foreach authors from="2" to="9"}}
+                                                            <div class="author-image-placeholder u-placeholder square">
+                                                                <a href="{{url}}" title="{{name}}">
+                                                                    {{#if profile_image}}
+                                                                        <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
+                                                                    {{else}}
+                                                                        <span class="u-object-fit">{{> icons/avatar}}</span>
+                                                                    {{/if}}
+                                                                </a>
+                                                                {{!-- <div class="author-name" >{{name}}</div> --}}
+                                                            </div>
+                                                        {{/foreach}}
+                                                    </div>
+                                                    <h4 class="author-name-book">{{authors from="2" to="7" separator="&nbsp; &nbsp; ✦ &nbsp; &nbsp;" suffix=" &nbsp; &nbsp; ✦ &nbsp; &nbsp; and more"}}</h4>
+                                                </div>
+                                            {{/if}}
+                                        {{/is}}
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                </header>
+
+                <div class="single-content gh-content kg-canvas">
+                    {{content}}
+                </div>
+
+                {{#is "post"}}
+                    {{#unless @member}}
+                        {{^has visibility="members"}}
+                            <div class="single-content gh-content kg-canvas">
+                                <div class="single-content-subscription">
+                                    <form class="form-wrapper cover-form" data-members-form>
+                                        <input class="auth-email" type="email" data-members-email placeholder="Your email..." required="true" autocomplete="false">
+
+                                        <button class="form-button" type="submit" aria-label="Submit">
+                                            <span class="default">Just try it</span>
+                                            <span class="loader">{{> icons/loader}}</span>
+                                            <span class="success">Email sent</span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            {{#if @custom.show_share_links}}
+                                {{!-- {{> content-footer}} --}}
+                            {{/if}}
+                        {{/has}}
+                    {{/unless}}
+                {{/is}}
+            </article>
         {{/post}}
         {{#is "post"}}
             {{> comment}}

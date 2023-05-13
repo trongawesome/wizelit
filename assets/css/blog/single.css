@@ -40,6 +40,21 @@
     text-align: left;
 }
 
+.single-text-wrapper-book {
+    padding: 40px 0;
+    background-color: var(--white-color);
+    box-shadow: 0px -6px 16px -13px rgba(0, 0, 0, 0.26);
+    margin-top: -140px;
+    z-index: 1;
+    position: relative;
+}
+
+.single-text-wrapper-book .single-meta,
+.single-text-wrapper-book .single-title,
+.single-text-wrapper-book .single-excerpt {
+    text-align: center;
+}
+
 .single-meta-item + .single-meta-item::before {
     content: "\02022";
     padding: 0 0.3rem;
@@ -49,7 +64,7 @@
 .single-title {
     margin-bottom: 0;
     /* font-size: 4vmin; */
-    font-size: 8rem;
+    font-size: 5rem;
     line-height: 1.25;
     letter-spacing: -0.1rem;
     text-align: left;
@@ -60,11 +75,12 @@
 }
 
 .single-excerpt {
-    margin-top: 2rem;
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     color: var(--dark-gray-color);
     line-height: 1.5;
-    text-align: left;
+    text-align: center;
+    max-width: 700px;
+    margin: 2.4rem auto 0;
 }
 
 .has-serif-body .single-excerpt {
@@ -76,12 +92,35 @@
     margin-bottom: 0;
 }
 
+.single-media-wrap-book {
+    padding-top: calc(8vmin + var(--navbar-height));
+    margin-top: calc(-8vmin - var(--navbar-height));
+    background-color: #A7EAC0;
+}
+
+.single-media-book {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
 .single-media.kg-width-narrow {
     margin-top: 0;
 }
 
-.single-media img {
+.single-media img,
+.single-media-book img {
     width: 100%;
+    border-radius: 12px;
+}
+
+.single-media-book img {
+    filter: drop-shadow(89px -100px 53px rgba(0, 0, 0, 0.02)) drop-shadow(50px -56px 45px rgba(0, 0, 0, 0.05)) drop-shadow(22px -25px 33px rgba(0, 0, 0, 0.09)) drop-shadow(6px -6px 18px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+}
+
+.single-text-wrapper-book {
+    /* display: grid; */
+    width: 100%;
+    align-items: center;
 }
 
 .single-cta {
@@ -151,6 +190,7 @@
     display: flex;
     flex-direction: column;
     align-items: baseline;
+    margin-top: 40px;
 }
 
 .single-footer-title {

@@ -39,6 +39,43 @@
     border-radius: 50%;
 }
 
+.author-name-label {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--dark-gray-color);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.author-list-book {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-self: center;
+    justify-items: center;
+    row-gap: 24px;
+}
+
+.author-list-book .author-image-placeholder {
+    flex-shrink: 0;
+    overflow: hidden;
+    margin: 0;
+    width: 112px;
+    height: 112px;
+    border: 6px solid var(--white-color);
+    border-radius: 50%;
+    margin-left: -24px;
+    position: relative;
+}
+
+.author-name-book {
+    text-align: center;
+    width: 100%;
+    margin-top: 8px;
+    color: var(--secondary-text-color);
+}
+
 .author-list .author-image-placeholder:first-child {
     z-index: 10;
 }
