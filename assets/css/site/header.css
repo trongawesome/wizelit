@@ -14,7 +14,7 @@
 .header-inner {
     display: grid;
     height: var(--navbar-height);
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr minmax(min-content, 700px) 1fr;
     grid-auto-flow: row dense;
     column-gap: 4rem;
     /* border-bottom: 1px solid var(--darker-gray-color); */
@@ -62,7 +62,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-right: 32px;
+    padding-left: 32px;
 }
 
 .site-header .menu-item {
@@ -82,6 +82,22 @@
 .with-alt-header:not(.menu-opened) .header-nav .menu-item,
 .with-alt-header:not(.menu-opened) .header-actions .menu-item {
     color: #fff;
+}
+
+.header-search-bar {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    align-self: center;
+    background-color: var(--lighter-gray-color);
+    border-radius: 6px;
+    padding: 0 16px;
+    grid-template-columns: 1fr auto;
+}
+
+.search-help-text {
+    color: var(--mid-gray-color);
 }
 
 /* Dropdown
@@ -151,7 +167,7 @@
 }
 
 .header-actions .social-item {
-    margin-right: 2.4rem;
+    margin-left: 2.8rem;
 }
 
 .with-full-cover:not(.menu-opened) .header-actions .social-item,

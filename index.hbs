@@ -45,66 +45,66 @@
             </div>
         {{/get}}
 
-        <section class="people-recommend">
-            <div class="kg-canvas kg-page-content">
-                <div class="section-text">
-                    {{#if @custom.people_recommend_title}}
-                        <h2 class="cover-section-title">{{@custom.people_recommend_title}}</h2>
-                    {{/if}}
-                    {{#if @custom.people_recommend_desc}}
-                        <p class="cover-description-subtext">{{@custom.people_recommend_desc}}</p>
-                    {{/if}}
-                </div>
-                <div class="people-recommend-list kg-grid kg-grid-4col">
-                    {{#get "authors" limit="8" include="count.posts" order="count.posts desc"}}
-                        {{#foreach authors}}
-                            {{> author-card}}
-                        {{/foreach}}
-                    {{/get}}
-                </div>
-                <div>
-                    <a class="button button-secondary"
-                            href="/" target="_blank"
-                            rel="noopener noreferrer" aria-label="View all books">
-                        <span class="default">View all experts</span>
-                        {{> icons/arrow-right}}
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="book-list">
-            <div class="kg-canvas">
-                <div class="section-text">
-                    {{#if @custom.book_list_title}}
-                        <h2 class="cover-section-title">{{@custom.book_list_title}}</h2>
-                    {{/if}}
-                    {{#if @custom.book_list_desc}}
-                        <p class="cover-description-subtext">{{@custom.book_list_desc}}</p>
-                    {{/if}}
-                </div>
-            </div>
-            <div class="kg-canvas">
-                <div class="kg-width-wide">
-                    <div class="kg-grid kg-grid-3col">
-                        {{!-- book list here --}}
-                        <div>List 1</div>
-                        <div>List 2</div>
-                        <div>List 3</div>
+        {{#if @custom.people_recommend_title}}
+            <section class="people-recommend">
+                <div class="kg-canvas kg-page-content">
+                    <div class="section-text">
+                            <h2 class="cover-section-title">{{@custom.people_recommend_title}}</h2>
+                        {{#if @custom.people_recommend_desc}}
+                            <p class="cover-description-subtext">{{@custom.people_recommend_desc}}</p>
+                        {{/if}}
+                    </div>
+                    <div class="people-recommend-list kg-grid kg-grid-4col">
+                        {{#get "authors" limit="8" include="count.posts" order="count.posts desc"}}
+                            {{#foreach authors}}
+                                {{> author-card}}
+                            {{/foreach}}
+                        {{/get}}
+                    </div>
+                    <div>
+                        <a class="button button-secondary"
+                                href="/" target="_blank"
+                                rel="noopener noreferrer" aria-label="View all books">
+                            <span class="default">View all experts</span>
+                            {{> icons/arrow-right}}
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="kg-canvas">
-                <div>
-                    <a class="button button-secondary"
-                            href="/" target="_blank"
-                            rel="noopener noreferrer" aria-label="View all books">
-                        <span class="default">View all book lists</span>
-                        {{> icons/arrow-right}}
-                    </a>
+            </section>
+        {{/if}}
+
+        {{#if @custom.book_list_title}}
+            <section class="book-list">
+                <div class="kg-canvas">
+                    <div class="section-text">
+                            <h2 class="cover-section-title">{{@custom.book_list_title}}</h2>
+                        {{#if @custom.book_list_desc}}
+                            <p class="cover-description-subtext">{{@custom.book_list_desc}}</p>
+                        {{/if}}
+                    </div>
                 </div>
-            </div>
-        </section>
+                <div class="kg-canvas">
+                    <div class="kg-width-wide">
+                        <div class="kg-grid kg-grid-3col">
+                            {{!-- book list here --}}
+                            <div>List 1</div>
+                            <div>List 2</div>
+                            <div>List 3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kg-canvas">
+                    <div>
+                        <a class="button button-secondary"
+                                href="/" target="_blank"
+                                rel="noopener noreferrer" aria-label="View all books">
+                            <span class="default">View all book lists</span>
+                            {{> icons/arrow-right}}
+                        </a>
+                    </div>
+                </div>
+            </section>
+        {{/if}}
     </main>
 </div>
 
