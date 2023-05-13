@@ -164,6 +164,10 @@ blockquote.kg-blockquote-alt::after {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.kg-grid-5col {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
 .kg-grid-xcol {
     grid-template-columns: repeat(16, 400px);
 }
@@ -192,6 +196,9 @@ blockquote.kg-blockquote-alt::after {
     }
     .kg-grid-3col {
         grid-template-columns: 1fr 1fr;
+    }
+    .kg-site-margin {
+        margin: 0 4vw;
     }
 }
 

@@ -33,13 +33,6 @@
 
             <div class="header-actions">
 
-                {{#if @member}}
-                    <button class="button-text menu-item members-account" data-portal="account">Account</button>
-                {{else}}
-                    <button class="button-text menu-item members-login" data-portal="signin">Login</button>
-                    <button class="button-text menu-item members-subscribe" data-portal="signup">Subscribe</button>
-                {{/if}}
-
                 <div class="social">
                     {{#if @site.twitter}}
                         <a class="social-item social-item-twitter"
@@ -47,8 +40,22 @@
                             rel="noopener noreferrer" aria-label="Twitter">
                             {{> icons/twitter}}
                         </a>
+                        <a class="social-item social-item-search"
+                            href="#"
+                            aria-label="Search"
+                            data-ghost-search >
+                                {{> icons/search}}
+                        </a>
                     {{/if}}
                 </div>
+
+                {{#if @member}}
+                    <button class="button-text menu-item members-account" data-portal="account">Account</button>
+                {{else}}
+                    <button class="button-text menu-item members-login" data-portal="signin">Login</button>
+                    <button class="button-text menu-item members-subscribe" data-portal="signup">Subscribe</button>
+                {{/if}}
+
             </div>
         </div>
     </div>
