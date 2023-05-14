@@ -79,7 +79,16 @@
                 </header>
 
                 <div class="single-content gh-content kg-canvas">
+                    {{!-- toc --}}
+                    <aside class="toc-container toc-native">
+                        <div class="toc-sidebar">
+                            <h2>What are the key ideas from ‘{{title}}’?</h2>
+                            <div class="toc"></div>
+                        </div>
+                    </aside>
+
                     {{content}}
+
                 </div>
 
                 {{#is "post"}}
