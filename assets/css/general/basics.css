@@ -17,7 +17,6 @@
     --rss-color: #f26522;
     --animation-base: ease-in-out;
     --background-color: #fff;
-    --background-color-gradient: linear-gradient(180deg,transparent,hsla(0,0%,95%,.29) 47.39%,#fff),linear-gradient(90deg,#f9ddf1 .07%,#e5e1ff 16.73%,#daedff 34.48%,#e2f4e3 49.98%,#ebf5d8 66.12%,#faf2da 81.95%,#fbe5d8 99.9%);
     --divider-color: rgb(0 0 0 / 3%);
     --muted-background-color: rgb(250 250 250 / 40%);
     /* --font-base: sans-serif; */
@@ -25,16 +24,6 @@
     --font-serif: Domaine Text, Merriweather, Times, serif;
     --navbar-height: 96px;
     --border-separator: 2px solid var(--primary-text-color);
-    /* fun shadow */
-    --fun-box-shadow: 0 0 0 var(--primary-text-color,0) var(--primary-text-color),0 var(--primary-text-color,.375em) 0 0 var(--primary-text-color);
-    --box-shadow-dreamy: 0px -8px 20px rgba(0, 0, 0, 0.03);
-    /* custom color */
-    --custom-color-one: #C7C8CA;
-    --custom-color-two: #ACADCA;
-    --custom-color-three: #EACA96;
-    --custom-color-four: #A4BEB2;
-    --custom-color-five: #A9BED3;
-    --custom-color-six: rgb(13, 13, 13);
     --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
