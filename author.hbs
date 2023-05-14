@@ -48,13 +48,13 @@
 
         <div class="kg-canvas">
             <div class="kg-width-full kg-site-margin">
-                <div class="kg-grid kg-grid-4col">
+                <div class="post-feed kg-grid kg-grid-4col">
                     {{#foreach posts}}
                         {{> card-horizontal}}
                     {{/foreach}}
                 </div>
+                {{pagination}}
             </div>
-
         </div>
     </main>
 </div>
