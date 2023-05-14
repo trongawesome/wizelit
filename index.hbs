@@ -36,7 +36,7 @@
             <div class="kg-canvas kg-page-content">
                 <div>
                  <a class="button button-secondary"
-                        href="/" target="_blank"
+                        href="/books/" target="_blank"
                         rel="noopener noreferrer" aria-label="View all books">
                     <span class="default">View all books</span>
                     {{> icons/arrow-right}}
@@ -55,7 +55,7 @@
                         {{/if}}
                     </div>
                     <div class="people-recommend-list kg-grid kg-grid-4col">
-                        {{#get "authors" limit="8" include="count.posts" order="count.posts desc"}}
+                        {{#get "authors" filter="slug:-trong" limit="8" include="count.posts" order="count.posts desc"}}
                             {{#foreach authors}}
                                 {{> author-card}}
                             {{/foreach}}
@@ -63,7 +63,7 @@
                     </div>
                     <div>
                         <a class="button button-secondary"
-                                href="/" target="_blank"
+                                href="/people/" target="_blank"
                                 rel="noopener noreferrer" aria-label="View all books">
                             <span class="default">View all experts</span>
                             {{> icons/arrow-right}}

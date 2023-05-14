@@ -1,0 +1,21 @@
+{{!< default}}
+<div class="content-area">
+    <main class="site-main">
+        
+        {{> page-header}}
+
+        <section class="kg-canvas">
+            <div class="kg-width-wide">
+                <div class="kg-grid kg-grid-4col">
+                    {{#get "authors" filter="slug:-trong" include="count.posts" order="count.posts desc"}}
+                        {{#foreach authors}}
+                            {{> author-card}}
+                        {{/foreach}}
+                    {{/get}}
+                </div>    
+            </div>
+        </section>
+    </main>
+</div>
+
+{{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}

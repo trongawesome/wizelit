@@ -1,0 +1,22 @@
+{{#page}}
+    <section class="taxonomy kg-canvas">
+        <header class="single-header kg-width-wide">
+            {{#if feature_image}}
+                <div class="taxonomy-media u-placeholder square">
+                    <img 
+                        class="u-object-fit" 
+                        {{!-- srcset="{{> srcset}}"  --}}
+                        src="{{img_url feature_image size="s"}}" 
+                        alt="{{title}}
+                        ">
+                </div>
+            {{/if}}
+            <div class="tag-wrapper">
+                <h1 class="single-title">{{title}}</h1>
+                {{#if custom_excerpt}}
+                    <div class="single-excerpt">{{custom_excerpt}}</div>
+                {{/if}}
+            </div>
+        </header>
+    </section>
+{{/page}}

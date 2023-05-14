@@ -164,8 +164,8 @@ blockquote.kg-blockquote-alt::after {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.kg-grid-5col {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+.kg-grid-book-col {
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .kg-grid-xcol {
@@ -185,6 +185,18 @@ blockquote.kg-blockquote-alt::after {
 .book-slider-inner {
     position: relative;
     animation: marquee 100s linear infinite;
+}
+
+@media (max-width: 1559px) {
+    .kg-grid-book-col {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1028px) {
+    .kg-grid-book-col {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 767px) {
@@ -207,5 +219,9 @@ blockquote.kg-blockquote-alt::after {
     .kg-grid-2col,
     .kg-grid-2col-shortleft {
         grid-template-columns: 1fr;
+    }
+
+    .kg-grid-book-col {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

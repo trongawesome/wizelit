@@ -1,9 +1,4 @@
 routes:
-  /notes/:
-    template: notes
-    controller: channel
-    filter: 'tag:notes'
-    data: tag.notes
   /diary/:
     template: post-extended
     controller: channel
@@ -13,28 +8,18 @@ routes:
     template: archive
     controller: channel
     data: tag.archive
-
-collections:
-  /essays/:
-    permalink: /{slug}/
-    template: essays
-    filter: 'tag:atomic-essay'
-    data: tag.atomic-essay
-  /works/:
-    permalink: /{slug}/
-    template: portfolios
-    filter: primary_tag:portfolios
-    data: tag.portfolios
-  /side-projects/:
-    permalink: /{slug}/
-    template: essays
-    filter: primary_tag:side-projects
-    data: tag.side-projects
+  /people/:
+    template: people
+    data: page.people
   /:
-    data: page.home
-    permalink: /{slug}/
     template: index
 
+collections:
+  /books/:
+    data: page.books
+    permalink: /{slug}/
+    template: books
+
 taxonomies:
-  tag: /tag/{slug}/
-  author: /author/{slug}/
+  tag: /types/{slug}/
+  author: /people/{slug}/

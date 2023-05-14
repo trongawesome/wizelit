@@ -1,24 +1,8 @@
 {{!< default}}
 <div class="content-area">
     <main class="site-main">
-        {{#tag}}
-            <section class="taxonomy kg-canvas">
-                <header class="single-header kg-width-wide">
-                    {{#if feature_image}}
-                        <div class="taxonomy-media u-placeholder square">
-                            <img class="u-object-fit" src="{{img_url feature_image size="s"}}" alt="{{name}}">
-                        </div>
-                    {{/if}}
-                    <div class="tag-wrapper">
-                        <h1 class="single-title">{{name}}</h1>
-
-                        {{#if description}}
-                            <div class="single-excerpt">{{description}}</div>
-                        {{/if}}
-                    </div>
-                </header>
-            </section>
-        {{/tag}}
+        
+        {{> page-header}}
                 
         {{!-- <section class="kg-canvas">
             {{> featured-minimal}}
@@ -34,7 +18,7 @@
             </header>
 
             <div class="kg-width-full kg-site-margin">
-                <div class="post-feed kg-grid kg-grid-4col">
+                <div class="post-feed kg-grid kg-grid-book-col">
                     {{#foreach posts}}
                         {{> card-horizontal}}
                     {{/foreach}}
