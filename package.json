@@ -76,11 +76,6 @@
                 "type": "text",
                 "group": "homepage"
             },
-            "feed_title": {
-                "type": "text",
-                "default": "Latest Evergreen Notes",
-                "group": "homepage"
-            },
             "feed_layout": {
                 "type": "select",
                 "options": [
