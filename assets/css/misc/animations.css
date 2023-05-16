@@ -54,6 +54,9 @@
 }
 
 @keyframes marquee {
-    0% { left: 0; }
-    100% { left: -100%; }
+    /* 0% { left: 0; }
+    100% { left: -100%; } */
+
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }

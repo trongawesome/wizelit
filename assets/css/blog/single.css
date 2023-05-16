@@ -253,7 +253,16 @@
     .single-media {
         margin-top: 3rem;
     }
+    
     .single-header-narrow {
         grid-template-columns: 1fr;
+    }
+
+    .single-media-book {
+        max-width: 300px;
+    }
+
+    .single-text-wrapper-book {
+        margin-top: -80px;
     }
 }
