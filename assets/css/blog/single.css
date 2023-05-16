@@ -117,7 +117,7 @@
 }
 
 .single-media-book img {
-    filter: drop-shadow(89px -100px 53px rgba(0, 0, 0, 0.02)) drop-shadow(50px -56px 45px rgba(0, 0, 0, 0.05)) drop-shadow(22px -25px 33px rgba(0, 0, 0, 0.09)) drop-shadow(6px -6px 18px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+    box-shadow: 89px -100px 53px rgba(0, 0, 0, 0.02), 50px -56px 45px rgba(0, 0, 0, 0.05), 22px -25px 33px rgba(0, 0, 0, 0.09), 6px -6px 18px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 .single-text-wrapper-book {

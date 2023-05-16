@@ -33,6 +33,10 @@
     position: relative;
 }
 
+.header-brand .logo img {
+    width: auto;
+}
+
 .logo-text {
     color: var(--secondary-text-color);
     font-size: 1.8rem;
