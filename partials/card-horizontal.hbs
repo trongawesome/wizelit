@@ -7,6 +7,8 @@
                 src="{{img_url feature_image size="m"}}"
                 alt="{{title}}" loading="lazy">
         </div>
+    {{else}}
+        <div class="u-placeholder vertical"></div>
     {{/if}}
     {{!-- <h3 class="card-title">{{title}}</h3> --}}
     <a class="u-permalink" href={{url}} aria-label="{{title}}"></a>

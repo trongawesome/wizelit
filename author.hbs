@@ -6,14 +6,14 @@
             <section class="taxonomy">
                 <header class="single-header kg-canvas">
                     {{#if profile_image}}
-                        <div class="taxonomy-media u-placeholder square round">
+                        <div class="taxonomy-media u-placeholder vertical">
                             <img class="u-object-fit" src="{{img_url profile_image size="s"}}" alt="{{name}}">
                         </div>
                     {{/if}}
                     <div class="tag-wrapper">
                         {{#if website}}
                             <h1 class="single-title">
-                                <a href="{{website}}" target="_blank" rel="noopener noreferrer">{{name}}</a>
+                                {{name}}
                             </h1>
                         {{else}}
                             <h1 class="single-title">{{name}}</h1>
@@ -24,6 +24,7 @@
                         {{/if}}
 
                         <div class="single-excerpt">{{bio}}</div>
+                        <div class="single-excerpt">{{count.posts}}</div>
 
                         <div class="share author-social">
                             {{#if facebook}}
@@ -38,6 +39,13 @@
                                     href="https://twitter.com/{{twitter}}" target="_blank" rel="noopener noreferrer">
                                     {{> icons/twitter}}
                                     Twitter
+                                </a>
+                            {{/if}}
+                            {{#if website}}
+                                <a class="share-link share-link-twitter author-social-item"
+                                    href="{{website}}" target="_blank" rel="noopener noreferrer">
+                                    {{> icons/twitter}}
+                                    {{website}}
                                 </a>
                             {{/if}}
                         </div>

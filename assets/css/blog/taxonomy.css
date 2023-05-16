@@ -1,17 +1,21 @@
 .taxonomy {
-    margin-bottom: 8vmin;
+    margin-bottom: 4vmin;
 }
 
 .tag-wrapper {
-    border-bottom: var(--border-separator);
-    padding-bottom: 8vmin;
+    /* padding-bottom: 4vmin; */
 }
 
 .taxonomy-media {
     overflow: hidden;
-    margin: 0 0 3rem;
-    width: 200px;
-    /* border-radius: 6px; */
+    margin: 0 auto 3rem;
+    width: 230px;
+    border-radius: 8px;
+}
+
+.tag-wrapper .single-title,
+.tag-wrapper .single-excerpt {
+    text-align: center;
 }
 
 .tag-list-container {

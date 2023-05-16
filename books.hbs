@@ -3,20 +3,8 @@
     <main class="site-main">
         
         {{> page-header}}
-                
-        {{!-- <section class="kg-canvas">
-            {{> featured-minimal}}
-        </section> --}}
 
         <section class="kg-canvas">
-            <header class="feed-header">
-                {{#if @custom.feed_title}}
-                    <div class="feed-header-wrapper">
-                        <h2 class="feed-header-title">{{@custom.feed_title}}</h2>
-                    </div>
-                {{/if}}
-            </header>
-
             <div class="kg-width-full kg-site-margin">
                 <div class="post-feed kg-grid kg-grid-book-col">
                     {{#foreach posts}}
