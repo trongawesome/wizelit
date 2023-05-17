@@ -71,8 +71,8 @@ function subMenu() {
         return el.nodeName.toLowerCase() == 'a';
     }
 
-    if (items.length > 5) {
-        var separator = items[4];
+    if (items.length > 3) {
+        var separator = items[2];
 
         var toggle = document.createElement('button');
         toggle.setAttribute('class', 'button-icon menu-item-button menu-item-more');
