@@ -68,6 +68,10 @@
                 "type": "text",
                 "group": "homepage"
             },
+            "tag_slugs_for_list_collection": {
+                "type": "text",
+                "group": "homepage"
+            },
             "book_list_title": {
                 "type": "text",
                 "group": "homepage"

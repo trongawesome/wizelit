@@ -80,6 +80,21 @@
     margin: 0 40px;
 }
 
+.card-stack-wrapper-inner {
+    position: relative;
+    transition: transform .2s var(--ease-in-out-quad);
+    padding-bottom: 150%; 
+    margin-bottom: 56px;
+}
+
+.card-stack-wrapper:hover .card-stack-wrapper-inner {
+    transform: scale(.96);
+}
+
+.stack-text-wrap {
+    margin: 40px 0 24px;
+}
+
 .card-stack {
     position: absolute;
     top: 0;
@@ -87,27 +102,45 @@
     background-color: var(--brand-color);
     width: 100%;
     border-radius: 12px;
+    overflow: hidden;
+    transition: transform .2s var(--ease-in-out-quad);
 }
 
 .card-stack {
     box-shadow: 0 2px 5px rgba(0,0,0,.25);
 }
 
-.card-stack-1 {
+.card-stack:nth-child(1) {
     z-index: 11; /* First card is on top */
 }
 
-.card-stack-2 {
+.card-stack-wrapper:hover .card-stack:nth-child(1) {
+    transform: rotate(-2deg);
+}
+
+.card-stack:nth-child(2) {
     transform: rotate(-4deg);
 }
 
-.card-stack-3 {
+.card-stack-wrapper:hover .card-stack:nth-child(2) {
+    transform: rotate(-8deg);
+}
+
+.card-stack:nth-child(3) {
     transform: rotate(4deg);
 }
 
+.card-stack-wrapper:hover .card-stack:nth-child(3) {
+    transform: rotate(8deg);
+}
 
 @media (max-width: 767px) {
     .tag-list {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .card-stack-wrapper {
+        position: relative;
+        margin: 0 24px;
     }
 }

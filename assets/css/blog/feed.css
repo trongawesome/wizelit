@@ -199,22 +199,6 @@
     font-family: var(--font-serif);
 }
 
-.card-title {
-    font-size: 1.4rem;
-    font-weight: 400;
-    position: absolute;
-    bottom: 8px;
-    z-index: 10;
-    padding: 4px 8px;
-    border-radius: 6px;
-    margin: 0 8px;
-    color: var(--dark-gray-color);
-    background-color: var(--white-color);
-    text-overflow: ellipsis;
-    white-space: nowrap; /* keeps the text in a single line */
-    overflow: hidden;
-}
-
 .card-broweye {
     font-size: 1.8rem;
     opacity: .7;
@@ -485,14 +469,14 @@
     margin-bottom: 1.6rem;
 }
 
-.people-card-title {
+.card-title {
     text-align: center;
     margin: 16px 0 4px 0;
     font-size: 1.8rem;
     font-weight: 600;
 }
 
-.has-serif-title .people-card-title {
+.has-serif-title .card-title {
     font-family: var(--font-serif);
 }
 

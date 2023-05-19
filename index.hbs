@@ -73,7 +73,7 @@
             </section>
         {{/if}}
 
-        {{#if @custom.book_list_title}}
+        {{#if @custom.tag_slugs_for_list_collection}}
             <section class="book-list">
                 <div class="kg-canvas">
                     <div class="section-text">
@@ -86,10 +86,11 @@
                 <div class="kg-canvas">
                     <div class="kg-width-wide">
                         <div class="kg-grid kg-grid-3col">
-                            {{!-- book list here --}}
-                            {{> card-stack}}
-                            {{> card-stack}}
-                            {{> card-stack}}
+                            {{#get "tags" filter="slug:[{{@custom.tag_slugs_for_list_collection}}]" limit="3" include="count.posts"}}
+                                {{#foreach tags}}
+                                    {{> card-stack}}
+                                {{/foreach}}
+                            {{/get}}
                         </div>
                     </div>
                 </div>
