@@ -110,7 +110,6 @@
 .u-placeholder {
     position: relative;
     z-index: 10;
-    /* background-color: var(--lighter-gray-color); */
     overflow: hidden;
 }
 
@@ -133,6 +132,10 @@
 
 .u-placeholder.vertical::before {
     padding-bottom: 150%;
+}
+
+.u-placeholder img {
+    border-radius: 8px;
 }
 
 .u-object-fit {
