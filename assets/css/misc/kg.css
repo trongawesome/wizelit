@@ -169,7 +169,7 @@ blockquote.kg-blockquote-alt::after {
 }
 
 .kg-grid-xcol {
-    grid-template-columns: repeat(16, 400px);
+    grid-template-columns: repeat(16, 360px);
 }
 
 .kg-site-margin {
@@ -201,7 +201,7 @@ blockquote.kg-blockquote-alt::after {
     }
 
     .kg-grid-xcol {
-        grid-template-columns: repeat(16, 340px);
+        grid-template-columns: repeat(16, 300px);
     }
 }
 
@@ -222,7 +222,7 @@ blockquote.kg-blockquote-alt::after {
         margin: 0 4vw;
     }
     .kg-grid-xcol {
-        grid-template-columns: repeat(16, 300px);
+        grid-template-columns: repeat(16, 260px);
     }
 }
 

@@ -56,15 +56,19 @@
                 ],
                 "default": "Modern sans-serif"
             },
+            "site_hero_title": {
+                "type": "text",
+                "group": "homepage"
+            },
             "site_desc": {
                 "type": "text",
                 "group": "homepage"
             },
-            "people_recommend_title": {
+            "latest_books_title": {
                 "type": "text",
                 "group": "homepage"
             },
-            "people_recommend_desc": {
+            "latest_books_desc": {
                 "type": "text",
                 "group": "homepage"
             },
