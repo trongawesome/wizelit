@@ -1,26 +1,26 @@
 .share {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .share-link {
     display: flex;
     align-items: center;
-    margin: 0 0.6rem;
-    padding: 0 0.8rem;
-    height: 2.6rem;
-    color: var(--white-color);
-    font-size: 1.1rem;
+    margin: 0.6rem;
+    padding: 8px 12px;
+    color: var(--dark-gray-color);
+    font-size: 1.6rem;
     line-height: 0;
     font-weight: 800;
     letter-spacing: 0.04rem;
-    text-transform: uppercase;
-    border-radius: 3px;
+    border-radius: 8px;
+    border: 1px solid var(--mid-gray-color);
 }
 
 .share-link .icon {
-    margin-right: 0.4rem;
-    width: 14px;
-    height: 14px;
+    margin-right: 0.8rem;
+    width: 16px;
+    height: 16px;
     fill: currentColor;
 }
 
@@ -30,9 +30,9 @@
 }
 
 .share-link-facebook {
-    background-color: var(--facebook-color);
+    /* color: var(--facebook-color); */
 }
 
 .share-link-twitter {
-    background-color: var(--twitter-color);
+    /* color: var(--twitter-color); */
 }

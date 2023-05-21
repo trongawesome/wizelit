@@ -179,7 +179,7 @@ blockquote.kg-blockquote-alt::after {
 .book-slider-outer {
     position: relative;
     overflow-x: scroll;
-    padding: 40px 80px 64px 80px; 
+    padding: 32px 80px; 
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
