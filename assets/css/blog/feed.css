@@ -412,13 +412,8 @@
     margin-bottom: 6rem;
 }
 
-.portfolio-feed {
+.card-wrapper {
     position: relative;
-}
-
-.portfolio-feed .card-wrapper,
-.portfolio-feed .card-horizontal-wrapper {
-    /* position: relative; */
 }
 
 .posts-expanded article:first-child hr {

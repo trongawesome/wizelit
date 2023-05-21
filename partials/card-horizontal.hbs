@@ -13,5 +13,16 @@
         <div class="u-placeholder vertical"></div>
     {{/if}}
     {{!-- <h3 class="card-title">{{title}}</h3> --}}
+    <div class="card-authors-wrapper">
+        <div class="author-list-book">
+            {{#foreach authors from="2" to="4"}}
+                <div class="author-image-placeholder u-placeholder square">
+                    {{#if profile_image}}
+                        <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
+                    {{/if}}
+                </div>
+            {{/foreach}}
+        </div>
+    </div>
     <a class="u-permalink" href={{url}} aria-label="{{title}}"></a>
 </article>

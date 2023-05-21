@@ -25,7 +25,7 @@
             {{/unless}}
         </div>
 
-        {{#get "posts" limit="16"}}
+        {{#get "posts" limit="16" include="authors"}}
             <section class="book-slider-outer">
                 <div class="book-slider-inner kg-grid kg-grid-xcol">
                         {{#foreach posts}}
