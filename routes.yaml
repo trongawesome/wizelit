@@ -8,7 +8,7 @@ routes:
     template: archive
     controller: channel
     data: tag.archive
-  /people/:
+  /titans/:
     template: people
     data: page.people
   /:
