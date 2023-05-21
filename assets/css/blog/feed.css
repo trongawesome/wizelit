@@ -438,13 +438,14 @@
 }
 
 .book-slider-inner .card-wrapper.feed:hover {
-    transform: scale(1.08);
+    transform: scale(1.07);
 }
 
 .card-wrapper.feed .u-placeholder,
 .people-card .u-placeholder {
-    border-radius: 8px;
     background-color: var(--lighter-gray-color);
+    border-radius: 12px;
+    box-shadow: inset 0px 0px 0px 1px var( --lighter-gray-color);
 }
 
 .card-wrapper.feed .feed-excerpt,

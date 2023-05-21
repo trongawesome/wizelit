@@ -62,12 +62,11 @@
 .tag-list-item-count {
     writing-mode: horizontal-tb;
     color: var(--brand-color);
+    font-size: 2rem;
 }
 
-/* .tag-list-item::before {
-    content: "#";
-    color: var(--brand-color);
-    padding-bottom: 1rem;
+/* .has-serif-body .tag-list-item-count {
+    font-family: var(--font-serif);
 } */
 
 .tag-list-item + .tag-list-item {
