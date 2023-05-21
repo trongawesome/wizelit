@@ -47,19 +47,21 @@
 
         {{#if @custom.people_recommend_title}}
             <section class="people-recommend">
-                <div class="kg-canvas kg-page-content">
+                <div class="kg-canvas">
                     <div class="section-text">
                             <h2 class="cover-section-title">{{@custom.people_recommend_title}}</h2>
                         {{#if @custom.people_recommend_desc}}
                             <p class="cover-description-subtext">{{@custom.people_recommend_desc}}</p>
                         {{/if}}
                     </div>
-                    <div class="people-recommend-list kg-grid kg-grid-4col">
-                        {{#get "authors" filter="slug:-trong" limit="8" include="count.posts" order="count.posts desc"}}
-                            {{#foreach authors}}
-                                {{> author-card}}
-                            {{/foreach}}
-                        {{/get}}
+                    <div class="kg-width-wide">
+                        <div class="people-recommend-list kg-grid kg-grid-4col">
+                            {{#get "authors" filter="slug:-trong" limit="8" include="count.posts" order="count.posts desc"}}
+                                {{#foreach authors}}
+                                    {{> author-card}}
+                                {{/foreach}}
+                            {{/get}}
+                        </div>
                     </div>
                     <div>
                         <a class="button button-secondary"

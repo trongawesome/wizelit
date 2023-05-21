@@ -212,6 +212,9 @@ blockquote.kg-blockquote-alt::after {
     .kg-grid {
         column-gap: 16px;
     }
+    .kg-grid-4col {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .kg-grid-3col {
         grid-template-columns: 1fr 1fr;
     }
@@ -228,9 +231,6 @@ blockquote.kg-blockquote-alt::after {
     .kg-grid-2col,
     .kg-grid-2col-shortleft {
         grid-template-columns: 1fr;
-    }
-    .kg-grid-4col {
-        grid-template-columns: repeat(2, 1fr);
     }
     .kg-grid-book-col {
         grid-template-columns: repeat(2, 1fr);
