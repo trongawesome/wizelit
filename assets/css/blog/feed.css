@@ -414,6 +414,14 @@
 
 .card-wrapper {
     position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-wrapper:hover {
+    box-shadow: var(--dreamy-shadow);
+    transition: all .3s var(--ease-in-out-quad);
+    transform: translateY(-4px);
 }
 
 .posts-expanded article:first-child hr {
