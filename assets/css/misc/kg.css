@@ -178,8 +178,14 @@ blockquote.kg-blockquote-alt::after {
 
 .book-slider-outer {
     position: relative;
-    overflow-x: hidden;
-    padding: 40px 80px;
+    overflow-x: scroll;
+    padding: 40px 80px 64px 80px; 
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.book-slider-outer::-webkit-scrollbar {
+    display: none;
 }
 
 .book-slider-inner {
@@ -227,6 +233,10 @@ blockquote.kg-blockquote-alt::after {
     .book-slider-outer {
         padding: 24px 4vw;
     }
+    .book-slider-inner {
+        animation: marquee 30s linear infinite;
+    }
+    
 }
 
 @media (max-width: 575px) {

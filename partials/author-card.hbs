@@ -1,14 +1,14 @@
 <div class="people-card">
     <a href={{url}} aria-label="{{name}}">
         {{#if profile_image}}
-            <picture class="u-placeholder vertical">
+            <div class="u-placeholder vertical">
                 <img class="u-object-fit" 
                     srcset="{{img_url profile_image size="s" format="webp"}} 400w,
                             {{img_url profile_image size="m" format="webp"}} 750w"
                     sizes="(min-width: 992px) 400px, 300px"
                     src="{{img_url profile_image size="m"}}" 
                     alt="{{name}}">
-            </picture>
+            </div>
         {{/if}}
         <h3 class="card-title">{{name}}</h3>
         <p class="card-small-text">{{plural count.posts empty='books' singular='% book' plural='% books'}}</p>
