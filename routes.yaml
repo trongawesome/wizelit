@@ -25,4 +25,4 @@ collections:
 
 taxonomies:
   tag: /types/{slug}/
-  author: /people/{slug}/
+  author: /titans/{slug}/
