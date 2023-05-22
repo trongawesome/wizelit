@@ -90,6 +90,12 @@
     transform: scale(.96);
 }
 
+.card-stack-wrapper:hover .card-title,
+.card-stack-wrapper:hover .card-small-text {
+    color: var(--brand-color);
+    transition: color .2s var(--ease-in-out-quad);
+}
+
 .stack-text-wrap {
     margin: 40px 0 24px;
 }

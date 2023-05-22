@@ -11,6 +11,9 @@ routes:
   /titans/:
     template: people
     data: page.people
+  /collections/:
+    template: collections
+    data: page.collections
   /:
     template: index
 

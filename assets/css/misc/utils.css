@@ -177,6 +177,10 @@
     top: 16px;
 }
 
+.u-empty {
+    background-color: var(--white-color);
+}
+
 
 @media (max-width: 575px) {
     .u-placeholder.square.mobile-rectangle::before {

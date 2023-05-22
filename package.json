@@ -1,7 +1,7 @@
 {
     "name": "wizelit",
     "description": "A clean, minimal newsletter theme for the Ghost publishing platform",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "engines": {
         "ghost": ">=4.0.0"
     },

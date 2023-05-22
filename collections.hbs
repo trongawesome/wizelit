@@ -1,0 +1,23 @@
+{{!< default}}
+
+<div class="content-area">
+    <main class="site-main">
+        
+        {{> page-header}}
+        
+        <div class="kg-canvas">
+            <div class="kg-width-wide">
+                <div class="kg-grid kg-grid-3col">
+                    {{#get "tags" limit="12" include="count.posts" order='count.posts desc'}}
+                        {{#foreach tags}}
+                            {{> card-stack}}
+                        {{/foreach}}
+                    {{/get}}
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+{{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}
