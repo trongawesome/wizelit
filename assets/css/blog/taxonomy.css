@@ -114,19 +114,19 @@
     box-shadow: 0 2px 5px rgba(0,0,0,.25);
 }
 
-.card-stack:nth-child(1) {
-    z-index: 11; /* First card is on top */
-}
-
-.card-stack-wrapper:hover .card-stack:nth-child(1) {
-    transform: rotate(-2deg);
-}
-
 .card-stack:nth-child(2) {
-    transform: rotate(-4deg);
+    z-index: 11; /* Second card is on top */
 }
 
 .card-stack-wrapper:hover .card-stack:nth-child(2) {
+    transform: rotate(-2deg);
+}
+
+.card-stack:nth-child(1) {
+    transform: rotate(-4deg);
+}
+
+.card-stack-wrapper:hover .card-stack:nth-child(1) {
     transform: rotate(-8deg);
 }
 
