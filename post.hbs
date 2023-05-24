@@ -55,7 +55,9 @@
                                         {{#is "post"}}
                                             {{#if @custom.show_author}}
                                                 <div class="single-footer-top">
-                                                    <h4 class="author-name-label">In the recommended reading list of</h4>
+                                                    <h4 class="author-name-label">
+                                                        In recommended reading list of {{plural authors.length empty='Titans' singular='% Titan' plural='% Titans'}}
+                                                    </h4>
                                                     <div class="author-list-book">
                                                         {{#foreach authors from="2" to="10"}}
                                                             <div class="author-image-placeholder u-placeholder square">
@@ -122,6 +124,7 @@
             </article>
         {{/post}}
         {{#is "post"}}
+            {{> author-all}}
             {{> comment}}
             {{> related}}
         {{/is}}

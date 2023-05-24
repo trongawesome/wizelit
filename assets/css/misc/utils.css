@@ -181,6 +181,19 @@
     background-color: var(--white-color);
 }
 
+.u-link-wrapper {
+    position: relative;
+}
+
+.u-link-wrapper .u-placeholder.vertical {
+    transition: all .2s var(--ease-in-out-quad);
+}
+
+.u-link-wrapper:hover .u-placeholder.vertical {
+    box-shadow: var(--dreamy-shadow);
+    transform: translateY(-4px);
+}
+
 
 @media (max-width: 575px) {
     .u-placeholder.square.mobile-rectangle::before {

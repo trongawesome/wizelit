@@ -1,0 +1,14 @@
+{{#post}}
+    <div class="kg-canvas related-wrapper">
+        <div class="kg-width-wide">
+            <div class="related-content">
+                <h3 class="related-title">{{plural authors.length empty='Titans' singular='% Titan' plural='% Titans'}}  recommend ‘{{title}}’</h3>
+                <div class="kg-grid kg-grid-book-col">
+                    {{#foreach authors from="2" to="all" include="count.posts" order="count.posts desc"}}
+                        {{> author-card}}
+                    {{/foreach}}
+                </div>
+            </div>
+        </div>
+    </div>
+{{/post}}

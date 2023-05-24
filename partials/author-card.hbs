@@ -1,5 +1,5 @@
 <div class="people-card">
-    <a href={{url}} aria-label="{{name}}">
+    <div class="u-link-wrapper">
         {{#if profile_image}}
             <div class="u-placeholder vertical">
                 <img class="u-object-fit" 
@@ -12,5 +12,6 @@
         {{/if}}
         <h3 class="card-title">{{name}}</h3>
         <p class="card-small-text">{{plural count.posts empty='books' singular='% book' plural='% books'}}</p>
-    </a>
+        <a class="u-permalink" href={{url}} aria-label="{{name}}"></a>
+    </div>
 </div>

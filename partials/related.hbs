@@ -2,7 +2,7 @@
     {{#if related}}
         <section class="kg-canvas related-wrapper">
             <div class="related-content">
-                <h3 class="related-title">Related</h3>
+                <h3 class="related-title">Similar</h3>
                 <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} related-feed">
                     {{#foreach posts}}
                         {{> "loop"}}
