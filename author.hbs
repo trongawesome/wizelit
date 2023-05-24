@@ -24,9 +24,6 @@
                         {{/if}}
 
                         <h2 class="single-excerpt">{{bio}}</h2>
-                        <h3 class="single-subtext"> 
-                            Top {{plural ../pagination.total empty='books' singular='% book' plural='% books'}} recommended by {{name}}
-                        </h3>
 
                         <div class="share author-social">
                             {{#if facebook}}
@@ -51,6 +48,9 @@
                                 </a>
                             {{/if}}
                         </div>
+                        <h3 class="single-subtext"> 
+                            Top {{plural ../pagination.total empty='books' singular='% book' plural='% books'}} recommended by {{name}}
+                        </h3>
                     </div>
                 </header>
             </section>
