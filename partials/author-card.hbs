@@ -9,6 +9,8 @@
                     src="{{img_url profile_image size="m"}}" 
                     alt="{{name}}">
             </div>
+        {{else}}
+            <div class="u-placeholder vertical"></div>
         {{/if}}
         <h3 class="card-title">{{name}}</h3>
         <p class="card-small-text">{{plural count.posts empty='books' singular='% book' plural='% books'}}</p>
