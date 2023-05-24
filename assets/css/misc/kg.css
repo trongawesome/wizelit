@@ -164,6 +164,10 @@ blockquote.kg-blockquote-alt::after {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.kg-grid-6col {
+    grid-template-columns: repeat(6, 1fr);
+}
+
 .kg-grid-book-col {
     grid-template-columns: repeat(6, 1fr);
 }
@@ -206,6 +210,10 @@ blockquote.kg-blockquote-alt::after {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .kg-grid-6col {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
     .kg-grid-xcol {
         grid-template-columns: repeat(16, 300px);
     }
@@ -226,6 +234,9 @@ blockquote.kg-blockquote-alt::after {
     }
     .kg-site-margin {
         margin: 0 4vw;
+    }
+    .kg-grid-6col {
+        grid-template-columns: repeat(3, 1fr);
     }
     .kg-grid-xcol {
         grid-template-columns: repeat(16, 260px);

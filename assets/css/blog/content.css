@@ -283,6 +283,14 @@ body.post-template.tag-portfolios {
     border-radius: 32px;
 }
 
+.book-page-visibility {
+    visibility: hidden;
+}
+
+.page-book .book-page-visibility {
+    visibility: visible;
+}
+
 @media (max-width: 767px) {
     
     .gh-content h2 {
