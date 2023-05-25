@@ -1,4 +1,4 @@
-<article class="{{post_class}} card-wrapper feed">
+<article class="card-wrapper feed">
     {{#if feature_image}}
         <div class="u-placeholder vertical">
             <img class="u-object-fit"
@@ -15,7 +15,7 @@
     {{!-- <h3 class="card-title">{{title}}</h3> --}}
     <div class="card-authors-wrapper">
         <div class="author-list-book">
-            {{#foreach authors from="2" to="4"}}
+            {{#foreach authors from="2" to="6"}}
                 <div class="author-image-placeholder u-placeholder square">
                     {{#if profile_image}}
                         <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
