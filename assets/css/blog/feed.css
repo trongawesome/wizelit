@@ -448,7 +448,6 @@
 .people-card .u-placeholder {
     background-color: var(--lighter-gray-color);
     border-radius: 12px;
-    box-shadow: inset 0px 0px 0px 1px var( --lighter-gray-color);
 }
 
 .card-wrapper.feed .feed-excerpt,
@@ -478,6 +477,12 @@
     margin: 16px 0 4px 0;
     font-size: 1.8rem;
     font-weight: 600;
+}
+
+.related-content .card-title {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-top: 12px;
 }
 
 .has-serif-title .card-title {
