@@ -107,7 +107,7 @@
     width: 100%;
     border-radius: 12px;
     overflow: hidden;
-    transition: transform .2s var(--ease-in-out-quad);
+    transition: transform .5s var(--ease-bounce-back);
 }
 
 .card-stack {
