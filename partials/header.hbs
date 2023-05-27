@@ -21,17 +21,33 @@
                 </div>
             </div>
 
-            <a class="header-search-bar"
+            <a class="header-search-bar u-mobile-hidden"
                 href="#"
                 aria-label="Search"
                 data-ghost-search >
                 <span class="social-item">
                     {{> icons/search}}
                 </span>
-                <span class="search-help-text">⌘ + K</span>
+                <span class="search-help-text">⌘K</span>
             </a>
 
             <div class="header-actions">
+
+                <nav class="header-nav u-desktop-hidden">
+                    {{#if @site.navigation}}
+                        {{navigation}}
+                    {{/if}}
+                </nav>
+
+                <a class="header-search-bar u-header-search-bar"
+                    href="#"
+                    aria-label="Search"
+                    data-ghost-search >
+                    <span class="social-item">
+                        {{> icons/search}}
+                    </span>
+                    <span class="search-help-text">⌘K</span>
+                </a>
 
                 <div class="social">
                     {{#if @site.twitter}}
@@ -52,7 +68,7 @@
                 {{#if @member}}
                     <button class="button-text menu-item members-account" data-portal="account">Account</button>
                 {{else}}
-                    <button class="button-text menu-item members-login" data-portal="signin">Login</button>
+                    {{!-- <button class="button-text menu-item members-login" data-portal="signin">Login</button> --}}
                     <button class="button-text menu-item members-subscribe" data-portal="signup">Subscribe</button>
                 {{/if}}
 
