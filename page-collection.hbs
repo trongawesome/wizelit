@@ -1,0 +1,30 @@
+{{!< default}}
+
+<div class="content-area">
+    <main class="site-main">
+        
+        {{#page}}
+            {{> content no_image=true}}
+        {{/page}}
+        
+        <div class="kg-canvas single-section-wrapper">
+            <div class="kg-width-">
+                {{!-- <div class="kg-grid kg-grid-3col">
+                    {{#foreach posts}}
+                        {{> card-horizontal}}
+                    {{/foreach}}
+                </div> --}}
+
+                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} related-feed">
+                    {{#foreach posts}}
+                        {{> "loop"}}
+                    {{/foreach}}
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+</div>
+
+{{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}

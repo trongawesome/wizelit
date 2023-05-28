@@ -130,10 +130,6 @@
     font-family: var(--font-serif);
 } */
 
-.section-wrapper {
-    margin-top: 8vmin;
-}
-
 @media (max-width: 767px) {
     .author-list-book .author-image-placeholder {
         width: 80px;

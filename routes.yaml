@@ -14,6 +14,11 @@ routes:
   /collections/:
     template: collections
     data: page.collections
+  /collections/writing/:
+    template: page-collection
+    controller: channel
+    filter: tag:hash-collection-writing
+    data: page.collection-writing
   /:
     template: index
 

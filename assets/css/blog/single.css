@@ -247,6 +247,10 @@
     font-family: var(--font-serif);
 }
 
+.single-section-wrapper {
+    margin-top: 8vmin;
+}
+
 @media (max-width: 767px) {
     .single-header {
         margin-bottom: 3rem;

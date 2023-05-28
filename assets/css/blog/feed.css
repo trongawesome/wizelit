@@ -68,7 +68,6 @@
     position: relative;
     display: flex;
     align-items: flex-start;
-    overflow: hidden;
     padding: 2rem 0;
     line-height: 1;
 }
@@ -92,6 +91,11 @@
 
 .feed + .feed {
     border-top: 1px solid var(--divider-color);
+}
+
+.feed-card:hover .feed-image {
+    box-shadow: var(--dreamy-shadow);
+    transform: translateY(-3px);
 }
 
 .post-feed > .feed + .feed.feed-paged,
@@ -144,6 +148,9 @@
     flex-shrink: 0;
     margin-right: 2.5rem;
     width: 160px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: all .2s var(--ease-in-out-quad);
 }
 
 .post-feed.right-thumbnail .feed-image,
@@ -187,8 +194,8 @@
 
 .post-feed.expanded .feed-title,
 .content-feed.expanded .feed-title {
-    font-size: 2rem;
-    line-height: 1.2;
+    font-size: 2.4rem;
+    line-height: 1.4;
     font-weight: 700;
     white-space: normal;
 }
@@ -262,8 +269,9 @@
 
 .feed-excerpt {
     margin-top: 1rem;
-    line-height: 1.5;
-    color: var(--secondary-text-color);
+    line-height: 1.7;
+    font-size: 1.8rem;
+    color: var(--primary-text-color);
 }
 
 .card-horizontal-wrapper .feed-excerpt {
@@ -294,9 +302,9 @@
     transition: margin-right 0.2s var(--animation-base);
 }
 
-.has-serif-body .feed-right {
+/* .has-serif-body .feed-right {
     font-family: var(--font-serif);
-}
+} */
 
 .post-feed.expanded .feed-right,
 .content-feed.expanded .feed-right {
@@ -305,6 +313,15 @@
 
 .side-project-feed .feed-right {
     display: none;
+}
+
+.feed-author-name {
+    line-height: 1.7;
+    font-size: 1.6rem;
+}
+
+.feed-author-name span {
+    font-style: italic;
 }
 
 .post-feed:not(.expanded) .feed-date,
@@ -542,7 +559,7 @@
     }
     .post-feed.expanded .feed-title,
     .content-feed.expanded .feed-title {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
     }
 
     .posts-expanded .kg-width-left-sidebar {
