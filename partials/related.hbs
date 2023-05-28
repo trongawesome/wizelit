@@ -1,13 +1,14 @@
-{{#get "posts" limit="5" filter="tags:[{{post.tags}}]+id:-{{post.id}}" as |related|}}
+{{#get "posts" limit="6" include="authors" filter="tags:[{{post.tags}}]+id:-{{post.id}}" as |related|}}
     {{#if related}}
         <section class="kg-canvas related-wrapper">
             <div class="related-content">
                 <h3 class="related-title">Similar <span class="book-page-visibility">books</span> </h3>
-                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} related-feed">
+                <div class="kg-grid kg-grid-3col">
                     {{#foreach posts}}
-                        {{> "loop"}}
+                        {{> card-horizontal}}
                     {{/foreach}}
                 </div>
+
             </div>
         </section>
     {{/if}}

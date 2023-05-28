@@ -256,6 +256,9 @@ blockquote.kg-blockquote-alt::after {
     .kg-grid-2col-shortleft {
         grid-template-columns: 1fr;
     }
+    .related-wrapper .kg-grid-3col {
+        grid-template-columns: 1fr 1fr;
+    }
     .kg-grid-book-col {
         grid-template-columns: repeat(2, 1fr);
     }
