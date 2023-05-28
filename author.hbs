@@ -66,6 +66,22 @@
                 {{pagination}}
             </div>
         </div>
+
+        {{#author}}
+            <div class="kg-canvas section-wrapper">
+                <div class="related-content">
+                    <h3 class="related-title">Discover other Titans</h3>
+                    <div class="kg-grid kg-grid-4col">
+                        {{#get "authors" limit="8" filter="slug:-[wizelit,{{slug}}]" include="count.posts" order="count.posts desc"}}
+                            {{#foreach authors}}
+                                {{> author-card}}
+                            {{/foreach}}
+                        {{/get}}
+                    </div>
+                </div>
+            </div>
+        {{/author}}
+
     </main>
 </div>
 

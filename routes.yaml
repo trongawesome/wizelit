@@ -22,6 +22,7 @@ collections:
     data: page.books
     permalink: /{slug}/
     template: books
+    order: featured desc, published_at desc
 
 taxonomies:
   tag: /types/{slug}/

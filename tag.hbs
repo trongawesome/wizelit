@@ -29,7 +29,7 @@
         <div class="kg-canvas">
             <div class="kg-width-wide">
                 <div class="kg-grid kg-grid-3col">
-                    {{#foreach posts}}
+                    {{#foreach posts order="authors.length desc"}}
                         {{> card-horizontal}}
                     {{/foreach}}
                 </div>
