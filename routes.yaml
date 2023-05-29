@@ -11,8 +11,8 @@ routes:
   /titans/:
     template: people
     data: page.people
-  /collections/:
-    template: collections
+  /types/:
+    template: types
     data: page.collections
   /collections/writing/:
     template: page-collection

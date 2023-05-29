@@ -9,12 +9,6 @@
         
         <div class="kg-canvas single-section-wrapper">
             <div class="kg-width-">
-                {{!-- <div class="kg-grid kg-grid-3col">
-                    {{#foreach posts}}
-                        {{> card-horizontal}}
-                    {{/foreach}}
-                </div> --}}
-
                 <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} related-feed">
                     {{#foreach posts}}
                         {{> "loop"}}
