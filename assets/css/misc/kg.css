@@ -177,13 +177,13 @@ blockquote.kg-blockquote-alt::after {
 }
 
 .kg-site-margin {
-    margin: 0 80px;
+    margin: 0 4vmin;
 }
 
 .book-slider-outer {
     position: relative;
     overflow-x: scroll;
-    padding: 32px 80px; 
+    padding: 32px 4vmin; 
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
