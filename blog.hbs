@@ -1,0 +1,21 @@
+{{!< default}}
+<div class="content-area">
+    <main class="site-main">
+        {{#page}}
+            {{> content no_image=true}}
+        {{/page}}
+        <div class="content-area">
+            <main class="site-main expanded kg-canvas">
+                <div class=" post-feed kg-grid kg-grid-3col kg-width-wide">
+                    {{#foreach posts}}
+                        {{> "card"}}
+                    {{/foreach}}
+                </div>
+
+                {{pagination}}
+
+            </main>
+        </div>
+    </main>
+</div>
+{{#contentFor "body_class"}}{{#if next}} paged-next{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}

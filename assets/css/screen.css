@@ -22,6 +22,7 @@
 @import "blog/comment.css";
 @import "blog/taxonomy.css";
 @import "blog/toc.css";
+@import "blog/cards-content";
 @import "vendor/tiny-slider.css";
 @import "vendor/pswp.css";
 @import "misc/kg.css";

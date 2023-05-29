@@ -92,7 +92,7 @@
                     </div>
                     <div class="kg-width-wide">
                         <div class="people-recommend-list kg-grid kg-grid-4col">
-                            {{#get "posts" limit="8" include="authors"}}
+                            {{#get "posts" limit="8" filter="tag:-[blog,collections]" include="authors"}}
                                 {{#foreach posts}}
                                     {{> card-horizontal}}
                                 {{/foreach}}

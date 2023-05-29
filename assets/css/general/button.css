@@ -13,7 +13,7 @@
     letter-spacing: 0.5px;
     /* text-transform: uppercase; */
     background-color: var(--white-color);
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.25s var(--ease-in-out-quad);
 }
@@ -27,12 +27,28 @@
     margin-left: 8px;
 }
 
-.button-secondary {
-    color: var(--dark-gray-color);
+.button.button-primary {
+    background-color: var(--darker-gray-color);
+    color: var(--white-color);
+    text-decoration: none;
 }
 
-.button-secondary:hover {
+.button.button-primary:hover {
+    background-color: var(--dark-gray-color);
+}
+
+.button.button-secondary {
+    color: var(--dark-gray-color);
+    text-decoration: none;
+}
+
+.button.button-secondary:hover {
     color: var( --primary-text-color);
+}
+
+.content-button-group .button {
+    margin-bottom: 12px;
+    width: 100%;
 }
 
 .button-icon {

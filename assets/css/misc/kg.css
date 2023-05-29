@@ -94,7 +94,7 @@ blockquote.kg-blockquote-alt::after {
     grid-template-columns:
         [full-start] minmax(4vw,auto) 
         [wide-start] minmax(auto,320px) 
-        [main-start] min(700px,calc(100% - 8vw)) 
+        [main-start] min(640px,calc(100% - 8vw)) 
         [main-end] minmax(auto,320px) 
         [wide-end] minmax(4vw,auto) 
         [full-end];
@@ -206,6 +206,17 @@ blockquote.kg-blockquote-alt::after {
 }
 
 @media (max-width: 1028px) {
+
+    .kg-canvas {
+        grid-template-columns:
+            [full-start] minmax(4vw,auto) 
+            [wide-start] minmax(auto,320px) 
+            [main-start] min(480px,calc(100% - 8vw)) 
+            [main-end] minmax(auto,320px) 
+            [wide-end] minmax(4vw,auto) 
+            [full-end];
+    }
+
     .kg-grid-book-col {
         grid-template-columns: repeat(3, 1fr);
     }

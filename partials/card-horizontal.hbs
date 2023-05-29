@@ -1,31 +1,29 @@
 <article class="card-wrapper feed">
-    {{#if feature_image}}
-        <div class="u-placeholder vertical">
-            <img class="u-object-fit"
-                {{!-- srcset="{{> srcset}}" --}}
-                 srcset="{{img_url feature_image size="s" format="webp"}} 400w,
-                         {{img_url feature_image size="m" format="webp"}} 750w"
-                sizes="(min-width: 992px) 400px, (min-width: 768px) 300px, 200px"
-                src="{{img_url feature_image size="m"}}"
-                alt="{{title}}" loading="lazy">
-        </div>
-    {{else}}
-        <div class="u-placeholder vertical"></div>
-    {{/if}}
-    {{!-- <h3 class="card-title">{{title}}</h3> --}}
-    <div class="card-authors-wrapper">
-        <div class="author-list-book">
-            {{#foreach authors from="2" to="6"}}
-                <div class="author-image-placeholder u-placeholder square">
-                    {{#if profile_image}}
-                        <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
-                    {{/if}}
-                </div>
-            {{/foreach}}
-            {{!-- <div class="author-image-placeholder u-placeholder square">
-                <div class="author-counter">{{authors.length}}</div>
-                <div class="author-counter-label">Titans</div>
-            </div> --}}
+    <div class="card-head-wrapper">
+        {{#if feature_image}}
+            <div class="u-placeholder vertical">
+                <img class="u-object-fit"
+                    {{!-- srcset="{{> srcset}}" --}}
+                    srcset="{{img_url feature_image size="s" format="webp"}} 400w,
+                            {{img_url feature_image size="m" format="webp"}} 750w"
+                    sizes="(min-width: 992px) 400px, (min-width: 768px) 300px, 200px"
+                    src="{{img_url feature_image size="m"}}"
+                    alt="{{title}}" loading="lazy">
+            </div>
+        {{else}}
+            <div class="u-placeholder vertical"></div>
+        {{/if}}
+        {{!-- <h3 class="card-title">{{title}}</h3> --}}
+        <div class="card-authors-wrapper">
+            <div class="author-list-book">
+                {{#foreach authors from="2" to="6"}}
+                    <div class="author-image-placeholder u-placeholder square">
+                        {{#if profile_image}}
+                            <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
+                        {{/if}}
+                    </div>
+                {{/foreach}}
+            </div>
         </div>
     </div>
     <a class="u-permalink" href={{url}} aria-label="{{title}}"></a>

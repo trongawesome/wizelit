@@ -177,6 +177,26 @@
     top: 16px;
 }
 
+.left-sidebar-container {
+    bottom: 0;
+    font-size: 1.4rem;
+    grid-column: wide-start/main-start;
+    grid-row-start: 1;
+    margin: 0;
+    padding: 0 3rem 0 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.sticky-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 28px;
+    padding-right: 24px;
+}
+
 .u-empty {
     background-color: var(--white-color);
 }
@@ -194,6 +214,11 @@
     transform: translateY(-4px);
 }
 
+@media (max-width: 1028px) {
+    .sticky-wrapper {
+        padding-right: 0;
+    }
+}
 
 @media (max-width: 575px) {
     .u-placeholder.square.mobile-rectangle::before {

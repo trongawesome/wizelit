@@ -1,11 +1,13 @@
 <article class="{{post_class}} card-wrapper feed">
     {{#if feature_image}}
-        <div class="u-placeholder square">
-            <img class="u-object-fit"
-                srcset="{{> srcset}}"
-                sizes="(min-width: 1256px) calc((1130px - 60px) / 2), (min-width: 992px) calc((90vw - 60px) / 2), (min-width: 768px) calc((90vw - 30px) / 2), 90vw"
-                src="{{img_url feature_image size="m"}}"
-                alt="{{title}}" loading="lazy">
+        <div class="card-head-wrapper">
+            <div class="u-placeholder square">
+                <img class="u-object-fit"
+                    srcset="{{> srcset}}"
+                    sizes="(min-width: 1256px) calc((1130px - 60px) / 2), (min-width: 992px) calc((90vw - 60px) / 2), (min-width: 768px) calc((90vw - 30px) / 2), 90vw"
+                    src="{{img_url feature_image size="m"}}"
+                    alt="{{title}}" loading="lazy">
+            </div>
         </div>
     {{/if}}
     <h3 class="card-title">{{title}}</h3>
