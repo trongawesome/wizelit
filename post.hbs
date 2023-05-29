@@ -100,29 +100,7 @@
                 </div>
 
                 {{#is "post"}}
-                    {{#unless @member}}
-                        {{^has visibility="members"}}
-                            <div class="single-content gh-content kg-canvas">
-                                <div class="single-content-subscription">
-                                    <form class="form-wrapper cover-form" data-members-form>
-                                        <input class="auth-email" type="email" data-members-email placeholder="Your email..." required="true" autocomplete="false">
-
-                                        <div class="cover-description-smalltext">Get the latest updates in your inbox</div>
-                                        
-                                        <button class="form-button" type="submit" aria-label="Submit">
-                                            <span class="default">Subscribe</span>
-                                            <span class="loader">{{> icons/loader}}</span>
-                                            <span class="success">Email sent</span>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-
-                            {{!-- {{#if @custom.show_share_links}}
-                                {{> content-footer}}
-                            {{/if}} --}}
-                        {{/has}}
-                    {{/unless}}
+                    {{> subscription-box}}
                 {{/is}}
             </article>
         {{/post}}

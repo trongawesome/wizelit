@@ -1,0 +1,59 @@
+
+.tag-hash-not-book .kg-card.kg-bookmark-card {
+    margin-bottom: 2rem;
+}
+
+.tag-hash-not-book .kg-card.kg-bookmark-card a.kg-bookmark-container,
+.tag-hash-not-book .kg-card.kg-bookmark-card a.kg-bookmark-container:hover {
+    border: none;
+    overflow: visible;
+}
+
+.tag-hash-not-book .kg-bookmark-card .kg-bookmark-content {
+    padding: 0 20px 0 0;
+}
+
+.tag-hash-not-book .kg-bookmark-card .kg-bookmark-title {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+.tag-hash-not-book .kg-bookmark-card .kg-bookmark-description {
+    font-size: 1.8rem;
+    -webkit-line-clamp: 4;
+    max-height: fit-content;
+    opacity: .8;
+}
+
+.tag-hash-not-book .has-serif-body .kg-bookmark-card .kg-bookmark-description {
+    font-family: var(--font-serif);
+}
+
+.tag-hash-not-book .kg-bookmark-card .kg-bookmark-metadata {
+    display: none;
+}
+
+.tag-hash-not-book .kg-bookmark-card .kg-bookmark-thumbnail {
+    width: 44%;
+}
+
+.tag-hash-not-book .kg-bookmark-card .kg-bookmark-thumbnail img {
+    position: relative;
+    height: auto;
+    border-radius: 8px;
+    transition: all .3s var(--ease-in-out-quad);
+}
+
+.tag-hash-not-book .kg-bookmark-card:hover .kg-bookmark-thumbnail img {
+    box-shadow: var(--dreamy-shadow);
+    transform: translateY(-4px);
+}
+
+@media (max-width: 575px) {
+    .tag-hash-not-book .kg-bookmark-card .kg-bookmark-title {
+        font-size: 1.8rem;
+    }
+    .tag-hash-not-book .kg-bookmark-card .kg-bookmark-description {
+        font-size: 1.6rem;
+    }
+}
