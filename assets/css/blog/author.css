@@ -95,8 +95,8 @@
 }
 
 .card-authors-wrapper .author-list-book .author-image-placeholder {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     border: 3px solid var(--white-color);
     background-color: var(--white-color);

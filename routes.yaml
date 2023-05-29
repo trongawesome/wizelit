@@ -1,9 +1,4 @@
 routes:
-  /diary/:
-    template: post-extended
-    controller: channel
-    filter: tag:now
-    data: tag.now
   /archive/:
     template: archive
     controller: channel
