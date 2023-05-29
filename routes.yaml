@@ -28,13 +28,13 @@ collections:
     template: blog
     filter: tag:collections
     data: page.collections
-    order: published_at desc
+    order: featured desc, published_at desc
   /blog/:
     permalink: /blog/{slug}/
     template: blog
     filter: tag:blog
     data: page.blog
-    order: published_at desc
+    order: featured desc, published_at desc
   /books/:
     permalink: /{slug}/
     template: books
