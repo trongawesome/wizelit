@@ -285,6 +285,11 @@
         max-width: 300px;
     }
 
+    .single-media-book-small {
+        margin: 0 24px 0 0;
+        max-width: 40%;
+    }
+
     .single-text-wrapper-book {
         margin-top: -80px;
     }

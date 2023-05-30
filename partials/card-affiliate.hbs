@@ -1,22 +1,16 @@
-<aside class="left-sidebar-container">
-    <div class="sticky-wrapper">
-        <div class="single-media-book-small">
-            <img
-                src="{{img_url feature_image size="s"}}">
-        </div>
-        {{!-- <h4 class="single-title kg-width-wide">{{title}}</h4> --}}
-        <div class="content-button-group">
-            <a  class="button button-primary"
-                href="https://wizelit.com/"
-                rel="noopener noreferrer" aria-label="View on Amazon">
-                <span class="default">Buy on Amazon</span>
-                {{> icons/arrow-right}}
-            </a>
-            <a  class="button button-secondary"
-                href="https://wizelit.com/"
-                rel="noopener noreferrer" aria-label="View on Amazon">
-                <span class="default">Buy on Rakuten</span>
-            </a>
-        </div>
-    </div>
-</aside>
+{{#if og_description}}
+    <aside class="left-sidebar-container affilicate-card">
+        <a class="sticky-wrapper" href={{og_description}} rel="noopener noreferrer" aria-label="View on Amazon">
+            <div class="single-media-book-small">
+                <img
+                    src="{{img_url feature_image size="s"}}">
+            </div>
+            <div class="content-button-group">
+                <h4 class="affiliate-book-title">{{title}}</h4>
+                <div class="button button-primary">
+                    <span class="default">Buy on Amazon</span>
+                </div>
+            </div>
+        </a>
+    </aside>
+{{/if}}

@@ -78,3 +78,11 @@
     background-color: transparent;
     cursor: pointer;
 }
+
+@media (max-width: 1028px) {
+    .affilicate-card .button {
+        font-size: 1.6rem;
+        padding: 0 8px;
+        line-height: 1.2;
+    }
+}

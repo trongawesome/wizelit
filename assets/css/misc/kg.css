@@ -205,7 +205,7 @@ blockquote.kg-blockquote-alt::after {
     }
 }
 
-@media (max-width: 1028px) {
+@media (max-width: 1199px) {
 
     .kg-canvas {
         grid-template-columns:
