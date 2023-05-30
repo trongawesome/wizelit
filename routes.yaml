@@ -24,8 +24,8 @@ collections:
     filter: tag:collections
     data: page.collections
     order: featured desc, published_at desc
-  /blog/:
-    permalink: /blog/{slug}/
+  /story/:
+    permalink: /story/{slug}/
     template: blog
     filter: tag:blog
     data: page.blog

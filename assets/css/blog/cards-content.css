@@ -26,7 +26,7 @@
 }
 
 .has-serif-body .tag-hash-not-book .kg-bookmark-card .kg-bookmark-description {
-    font-family: var(--font-serif);
+    font-family: var(--font-serif) !important;
 }
 
 .tag-hash-not-book .kg-bookmark-card .kg-bookmark-metadata {
