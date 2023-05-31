@@ -27,6 +27,7 @@
     --border-separator: 2px solid var(--primary-text-color);
     --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
     --ease-bounce-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --body-font-size: 1.8rem;
 
     --dreamy-shadow: 0 54px 80px rgba(0,0,0,.07), 0 19.7109px 29.2013px rgba(0,0,0,.0482987), 0 9.56927px 14.1767px rgba(0,0,0,.0389404), 0 4.69103px 6.94968px rgba(0,0,0,.0310596), 0 1.85484px 2.74791px rgba(0,0,0,.0217013), 0 0 0 1px rgba(0,0,0,.03);
 }
@@ -114,7 +115,7 @@ blockquote:not([class]) {
     padding: 0 2.6rem;
     border-left: 4px solid var(--brand-color);
     color: var(--primary-text-color);
-    font-size: 2rem;
+    font-size: var(--body-font-size);
     line-height: 1.7;
     font-weight: 400;
     letter-spacing: -0.03rem;

@@ -9,6 +9,10 @@
     overflow: visible;
 }
 
+.kg-card.kg-bookmark-card a.kg-bookmark-container {
+    border-radius: 8px;
+}
+
 .tag-hash-not-book .kg-bookmark-card .kg-bookmark-content {
     padding: 0 20px 0 0;
 }

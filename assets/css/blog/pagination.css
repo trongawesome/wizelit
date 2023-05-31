@@ -1,5 +1,9 @@
-.pagination,
-body:not(.paged-next) .infinite-scroll-button {
+.pagination {
+    display: none;
+}
+
+body:not(.paged-next) .infinite-scroll-button,
+body:not(.paged-next) .pagination-new {
     display: none;
 }
 
