@@ -40,7 +40,7 @@
         
         {{#tag}}
             <div class="tag-list-wrapper kg-canvas">
-                {{#get "tags" limit="all" include='count.posts' order='count.posts desc' filter="id:-{{id}}+visibility:public" as |tags|}}
+                {{#get "tags" limit="24" include='count.posts' order='count.posts desc' filter="id:-{{id}}+visibility:public+slug:-[blog,collections]" as |tags|}}
                     {{#if tags}}
                         <div class="tag-list-container">
                             <div class="tag-list-label">Explore other categories</div>

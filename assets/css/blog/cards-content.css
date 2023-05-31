@@ -23,10 +23,11 @@
 }
 
 .tag-hash-not-book .kg-bookmark-card .kg-bookmark-description {
-    font-size: 1.8rem;
+    font-size: var(--body-font-size);
     -webkit-line-clamp: 4;
     max-height: fit-content;
     opacity: .8;
+    line-height: 1.7;
 }
 
 .has-serif-body .tag-hash-not-book .kg-bookmark-card .kg-bookmark-description {
