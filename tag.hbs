@@ -36,10 +36,10 @@
             </div>
         </div>
 
-            {{pagination}}
+        {{pagination}}
         
         {{#tag}}
-            <div class="tag-list-wrapper kg-canvas">
+            <div class="tag-page tag-list-wrapper kg-canvas">
                 {{#get "tags" limit="24" include='count.posts' order='count.posts desc' filter="id:-{{id}}+visibility:public+slug:-[blog,collections]" as |tags|}}
                 <div class="tag-list-container">
                     <div class="tag-list-label">Explore other categories</div>

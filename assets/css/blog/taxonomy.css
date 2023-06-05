@@ -33,7 +33,11 @@
     grid-template-columns: 1fr;
     align-items: stretch;
     row-gap: 16px;
-    column-gap: 16px;
+    column-gap: 24px;
+}
+
+.tag-page .tag-list {
+    grid-template-columns: 1fr 1fr;
 }
 
 .tag-list-label {
@@ -53,6 +57,12 @@
     grid-template-columns: 48px 1fr;
     align-items: center;
     column-gap: 16px;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.tag-list-item:hover {
+    background-color: var(--light-gray-color);
 }
 
 .tag-item-media {
@@ -135,14 +145,13 @@
 }
 
 @media (max-width: 767px) {
+    .tag-page .tag-list,
     .tag-list {
         grid-template-columns: 1fr;
         row-gap: 4px;
     }
     
     .tag-list-item {
-        padding: 8px;
-        border-radius: 12px;
         background: var(--white-color);
     }
     

@@ -78,11 +78,11 @@ body.with-custom-background {
 a {
     color: var(--primary-text-color);
     text-decoration: none;
-    transition: color 0.1s var(--animation-base);
+    transition: color 0.2s var(--ease-in-out-quad);
 }
 
 a:hover {
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 h1,

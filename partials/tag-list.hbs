@@ -2,7 +2,7 @@
     <div class="tag-list">
         {{#foreach tags}}
             <a class="tag-list-item" href="{{url}}">
-                {{#get "posts" filter="tag:{{slug}}" limit="1" }}
+                {{#get "posts" filter="primary_tag:{{slug}}" limit="1" }}
                     {{#foreach posts}}
                         {{#if feature_image}}
                             <div class="tag-item-media u-placeholder square">

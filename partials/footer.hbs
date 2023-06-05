@@ -1,15 +1,12 @@
 <footer class="site-footer kg-canvas">
     <div class="footer-inner kg-width-wide">
-        <div class="footer-left">
-            <div class="copyright">
-                {{@site.title}} © {{date format="YYYY"}}
-            </div>
-        </div>
-
-        <nav class="footer-nav">
-            {{navigation type="secondary"}}
-            <a class="menu-item badge" href="https://ghost.org/" target="_blank" rel="noopener noreferrer">Published with Ghost</a>
-        </nav>
+        <a class="footer-logo" href="{{@site.url}}">
+            {{#if @site.logo}}
+                <img class="logo-image" src="{{@site.logo}}" alt="{{@site.title}}">
+            {{else}}
+                <span class="logo-text">{{@site.title}}</span>
+            {{/if}}
+        </a>
 
         <div class="footer-right">
             <div class="social">
@@ -30,5 +27,20 @@
                 {{/if}}
             </div>
         </div>
+
+        <nav class="footer-nav">
+            {{navigation type="secondary"}}
+            <a class="menu-item badge" href="https://ghost.org/" target="_blank" rel="noopener noreferrer">Built with Ghost</a>
+        </nav>
+
+        <div class="footer-left">
+            <div class="copyright">
+                {{@site.title}} © {{date format="YYYY"}} 
+            </div>
+            <div class="copyright">
+                As an Amazon Associate I earn from qualifying purchases.
+            </div>
+        </div>
+
     </div>
 </footer>
