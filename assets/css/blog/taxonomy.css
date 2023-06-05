@@ -32,7 +32,7 @@
     display: grid;
     grid-template-columns: 1fr;
     align-items: stretch;
-    row-gap: 16px;
+    row-gap: 4px;
     column-gap: 24px;
 }
 
@@ -44,6 +44,7 @@
     margin-bottom: 2rem;
     color: var(--secondary-text-color);
     font-size: 2rem;
+    padding-left: 8px;
 }
 
 .right-sidebar-wrap .tag-list-label {
