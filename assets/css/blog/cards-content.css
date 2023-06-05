@@ -68,6 +68,19 @@
     width: 100%;
 }
 
+.kg-canvas .right-sidebar-container {
+    grid-column: main-end/wide-end;
+    position: relative;
+}
+
+.right-sidebar-wrap {
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    padding-left: 24px;
+}
+
 .sticky-wrapper {
     display: flex;
     flex-direction: column;
@@ -75,6 +88,11 @@
     top: 28px;
     padding-right: 24px;
     display: flex;
+}
+
+.right-sticky-wrapper {
+    position: sticky;
+    bottom: 28px;
 }
 
 .gh-content a.sticky-wrapper {
@@ -118,12 +136,21 @@
         height: 184px;
         overflow: hidden;
     }
+
+    .right-sidebar-wrap {
+        position: relative;
+        padding-left: 0;
+        margin-top: 48px;
+    }
+
     .content-button-group {
         width: 100%;
     }
+
     .affiliate-label {
         text-align: left;
     }
+
     .gh-content .affiliate-book-title {
         display: -webkit-box;
         font-size: 2rem;

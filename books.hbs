@@ -5,16 +5,25 @@
         {{> page-header}}
 
         <section class="kg-canvas">
-            <div class="kg-width-wide">
-                <div class="post-feed kg-grid kg-grid-4col">
+            <div class="kg-width-wide-partial">
+                <div class="post-feed kg-grid kg-grid-3col">
                     {{#foreach posts}}
                         {{> card-horizontal}}
                     {{/foreach}}
                 </div>
                 {{pagination}}
             </div>
+            <div class="right-sidebar-container">
+                <div class="right-sidebar-wrap">
+                    {{#get "tags" limit="24" include='count.posts' order='count.posts desc' filter="visibility:public+slug:-[blog,collections]" as |tags|}}
+                        <div class="right-sticky-wrapper">
+                            <div class="tag-list-label">Browse by categories</div>
+                            {{> tag-list}}
+                        </div>
+                    {{/get}}
+                </div>
+            </div>
         </section>
-
     </main>
 </div>
 

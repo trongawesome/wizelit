@@ -18,7 +18,7 @@
                         {{/if}}
 
                         <h3 class="single-subtext">
-                            A collection of {{plural ../pagination.total empty='books' singular='% book' plural='% books'}} with key ideas from each book.
+                            {{plural ../pagination.total empty='books' singular='% book' plural='% books'}} in {{name}} with a comprehensive summary of key ideas.
                         </h3>
                     </div>
                 </header>
@@ -41,21 +41,10 @@
         {{#tag}}
             <div class="tag-list-wrapper kg-canvas">
                 {{#get "tags" limit="24" include='count.posts' order='count.posts desc' filter="id:-{{id}}+visibility:public+slug:-[blog,collections]" as |tags|}}
-                    {{#if tags}}
-                        <div class="tag-list-container">
-                            <div class="tag-list-label">Explore other categories</div>
-                            <div class="tag-list">
-                                {{#foreach tags}}
-                                    <div class="tag-list-item-wrapper">
-                                        <a class="tag-list-item" href="{{url}}">
-                                            <span class="tag-list-item-count"> ({{count.posts}}) </span>    
-                                            {{name}}
-                                        </a>
-                                    </div>
-                                {{/foreach}}
-                            </div>
-                        </div>
-                    {{/if}}
+                <div class="tag-list-container">
+                    <div class="tag-list-label">Explore other categories</div>
+                    {{> tag-list}}
+                </div>
                 {{/get}}
             </div>
         {{/tag}}

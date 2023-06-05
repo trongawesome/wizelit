@@ -1,0 +1,20 @@
+{{#if tags}}
+    <div class="tag-list">
+        {{#foreach tags}}
+            <a class="tag-list-item" href="{{url}}">
+                {{#get "posts" filter="tag:{{slug}}" limit="1" }}
+                    {{#foreach posts}}
+                        {{#if feature_image}}
+                            <div class="tag-item-media u-placeholder square">
+                                <img class="u-object-fit" src="{{img_url feature_image size="xs" format="webp"}}" alt="{{name}}">
+                            </div>
+                        {{else}}
+                            <div class="tag-item-media u-placeholder square"></div>
+                        {{/if}}
+                    {{/foreach}}
+                {{/get}}
+                <span class="tag-list-item-count"> {{name}} </span>    
+            </a>
+        {{/foreach}}
+    </div>
+{{/if}}

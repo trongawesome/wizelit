@@ -112,6 +112,10 @@ blockquote.kg-blockquote-alt::after {
     grid-column: wide-start/wide-end;
 }
 
+.kg-width-wide-partial {
+    grid-column: wide-start/main-end;
+}
+
 .kg-width-full {
     grid-column: full-start/full-end;
 }
@@ -144,6 +148,10 @@ blockquote.kg-blockquote-alt::after {
 
 .kg-width-left-sidebar {
     grid-column: wide-start/main-start;
+}
+
+.kg-width-right-sidebar {
+    grid-column: main-end/wide-end;
 }
 
 .kg-grid-2col {
@@ -236,6 +244,9 @@ blockquote.kg-blockquote-alt::after {
     }
     .kg-grid {
         column-gap: 16px;
+    }
+    .kg-width-wide-partial, .right-sidebar-container {
+        grid-column: wide-start/wide-end !important;
     }
     .kg-grid-4col {
         grid-template-columns: repeat(2, 1fr);
