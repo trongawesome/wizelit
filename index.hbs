@@ -45,6 +45,35 @@
             </div>
         {{/get}}
 
+        {{#if @custom.latest_books_title}}
+            <section class="people-recommend">
+                <div class="kg-canvas">
+                    <div class="section-text">
+                            <h2 class="cover-section-title">{{@custom.latest_books_title}}</h2>
+                        {{#if @custom.latest_books_desc}}
+                            <p class="cover-description-subtext">{{@custom.latest_books_desc}}</p>
+                        {{/if}}
+                    </div>
+                    <div class="kg-width-wide">
+                        <div class="people-recommend-list kg-grid kg-grid-4col">
+                            {{#get "posts" limit="8" filter="tag:-[blog,collections]" include="authors"}}
+                                {{#foreach posts}}
+                                    {{> card-horizontal}}
+                                {{/foreach}}
+                            {{/get}}
+                        </div>
+                    </div>
+                    <div>
+                        <a class="button button-secondary"
+                                href="/books/"
+                                rel="noopener noreferrer" aria-label="View all books">
+                            <span class="default">View All</span>
+                            {{> icons/arrow-right}}
+                        </a>
+                    </div>
+                </div>
+            </section>
+        {{/if}}
 
         {{#if @custom.tag_slugs_for_list_collection}}
             <section class="book-list">
@@ -71,37 +100,6 @@
                     <div>
                         <a class="button button-secondary"
                                 href="/types/"
-                                rel="noopener noreferrer" aria-label="View all books">
-                            <span class="default">View All</span>
-                            {{> icons/arrow-right}}
-                        </a>
-                    </div>
-                </div>
-            </section>
-        {{/if}}
-        
-
-        {{#if @custom.latest_books_title}}
-            <section class="people-recommend">
-                <div class="kg-canvas">
-                    <div class="section-text">
-                            <h2 class="cover-section-title">{{@custom.latest_books_title}}</h2>
-                        {{#if @custom.latest_books_desc}}
-                            <p class="cover-description-subtext">{{@custom.latest_books_desc}}</p>
-                        {{/if}}
-                    </div>
-                    <div class="kg-width-wide">
-                        <div class="people-recommend-list kg-grid kg-grid-4col">
-                            {{#get "posts" limit="8" filter="tag:-[blog,collections]" include="authors"}}
-                                {{#foreach posts}}
-                                    {{> card-horizontal}}
-                                {{/foreach}}
-                            {{/get}}
-                        </div>
-                    </div>
-                    <div>
-                        <a class="button button-secondary"
-                                href="/books/"
                                 rel="noopener noreferrer" aria-label="View all books">
                             <span class="default">View All</span>
                             {{> icons/arrow-right}}

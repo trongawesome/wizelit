@@ -273,6 +273,7 @@ blockquote.kg-blockquote-alt::after {
 }
 
 @media (max-width: 575px) {
+    .book-list .kg-grid-3col,
     .kg-grid-2col,
     .kg-grid-2col-shortleft {
         grid-template-columns: 1fr;
