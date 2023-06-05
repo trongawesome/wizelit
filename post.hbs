@@ -53,10 +53,10 @@
                                         {{/if}}
 
                                         {{#is "post"}}
-                                            {{#if @custom.show_author}}
+                                            {{#match authors.length ">" 1}}
                                                 <div class="single-footer-top">
                                                     <h4 class="author-name-label">
-                                                        In the recommended reading list of {{plural authors.length empty='Titans' singular='% Titan' plural='% Titans'}}
+                                                        {{plural authors.length empty='Titans' singular='% Titan' plural='% Titans'}} recommend this book.
                                                     </h4>
                                                     <div class="author-list-book">
                                                         {{#foreach authors from="2" to="10"}}
@@ -73,7 +73,7 @@
                                                     </div>
                                                     <h4 class="author-name-book">{{authors from="2" to="7" separator="&nbsp; &nbsp; ✦ &nbsp; &nbsp;" suffix=" &nbsp; &nbsp; ✦ &nbsp; &nbsp; and more"}}</h4>
                                                 </div>
-                                            {{/if}}
+                                            {{/match}}
                                         {{/is}}
                                     </div>
                                 </div>
