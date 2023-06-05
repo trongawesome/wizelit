@@ -273,12 +273,11 @@ blockquote.kg-blockquote-alt::after {
 }
 
 @media (max-width: 575px) {
-    .kg-grid-3col,
     .kg-grid-2col,
     .kg-grid-2col-shortleft {
         grid-template-columns: 1fr;
     }
-    .related-wrapper .kg-grid-3col {
+    .kg-grid-3col {
         grid-template-columns: 1fr 1fr;
     }
     .kg-grid-book-col {
