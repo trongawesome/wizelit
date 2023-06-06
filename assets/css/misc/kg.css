@@ -285,6 +285,6 @@ blockquote.kg-blockquote-alt::after {
         grid-template-columns: repeat(2, 1fr);
     }
     .kg-grid-xcol {
-        grid-template-columns: repeat(16, 240px);
+        grid-template-columns: repeat(16, 180px);
     }
 }
