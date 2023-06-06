@@ -15,12 +15,14 @@
             </div>
             <div class="right-sidebar-container">
                 <div class="right-sidebar-wrap">
-                    {{#get "tags" limit="24" include='count.posts' order='count.posts desc' filter="visibility:public+slug:-[blog,collections]" as |tags|}}
-                        <div class="right-sticky-wrapper">
-                            <div class="tag-list-label">Browse by categories</div>
+                    <div class="right-sticky-wrapper">
+                        <div class="tag-list-label">Browse by categories</div>
+    
+                        {{#get "tags" limit="24" include='count.posts' order='count.posts desc' filter="visibility:public+slug:-[blog,collections]" as |tags|}}
                             {{> tag-list}}
-                        </div>
-                    {{/get}}
+                        {{/get}}
+
+                    </div>
                 </div>
             </div>
         </section>

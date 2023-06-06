@@ -9,6 +9,12 @@ routes:
   /types/:
     template: types
     data: page.types
+  /featured/:
+    template: featured
+    controller: channel
+    filter: tag:-[blog,collections]+featured:true
+    data: page.featured
+    order: published_at desc
   /collections/writing/:
     template: page-collection
     controller: channel
@@ -34,7 +40,7 @@ collections:
     permalink: /{slug}/
     template: books
     data: page.books
-    order: featured desc, published_at desc
+    order: published_at desc
 
 taxonomies:
   tag: /types/{slug}/
