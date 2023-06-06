@@ -137,6 +137,10 @@
         overflow: hidden;
     }
 
+    .sticky-wrapper .single-media-book-small img {
+        box-shadow: var(--dreamy-shadow);
+    }
+
     .right-sidebar-wrap {
         position: relative;
         padding-left: 0;
