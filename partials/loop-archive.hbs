@@ -1,0 +1,41 @@
+<article class="feed-card feed {{post_class}} post-year-{{date format="Y"}} post-date-{{date format="M"}} archive-wrapper" data-month="{{date format="MMMM YYYY"}}">
+    
+    <div class="date-wrapper">
+        <div class="year-post-label">{{date format="YYYY"}}</div>
+        <div class="month-post-label"> / {{date format="MMM YYYY"}}</div>
+    </div>
+    
+    <div class="feed-card-inside">
+        {{#match @custom.feed_layout "!=" "Text-only"}}
+            {{#match @custom.feed_layout "!=" "Minimal"}}
+                {{#if feature_image}}
+                    <div class="feed-image u-placeholder vertical">
+                            <img class="u-object-fit"
+                                srcset="{{img_url feature_image size="xs" format="webp"}} 150w,
+                                        {{img_url feature_image size="s" format="webp"}} 400w"
+                                sizes="(min-width: 576px) 160px, 40vw"
+                                src="{{img_url feature_image size="s"}}"
+                                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                                loading="lazy"
+                            >
+                    </div>
+                {{/if}}
+            {{/match}}
+        {{/match}}
+
+        <div class="feed-wrapper">
+            {{!-- <h4 class="feed-sub-heading">
+                No—{{@number}}
+                <div class="featured-visibility {{#match featured}}star-it{{/match}}" alt="Featured notes">
+                    {{> icons/star}}
+                </div>
+            </h4> --}}
+            <h2 class="feed-title">{{title}}</h2>
+            {{#if excerpt}}
+                <div class="feed-excerpt">{{excerpt words="20"}}</div>
+            {{/if}}
+        </div>
+        <a class="u-permalink" href="{{url}}" aria-label="{{title}}"></a>
+    </div>
+    
+</article>

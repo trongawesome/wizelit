@@ -2,7 +2,8 @@ routes:
   /archive/:
     template: archive
     controller: channel
-    data: tag.archive
+    data: page.archive
+    order: published_at desc
   /titans/:
     template: people
     data: page.people

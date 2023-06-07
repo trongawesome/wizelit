@@ -107,6 +107,11 @@
     color: var(--mid-gray-color);
 }
 
+/* .nav-current,
+.nav-current-parent {
+    color: blue;
+} */
+
 /* Dropdown
 /* ---------------------------------------------------------- */
 
