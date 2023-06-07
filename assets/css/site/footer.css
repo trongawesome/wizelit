@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 1fr;
     padding-top: 6rem;
-    border-top: 2px solid var(--primary-text-color);
+    /* border-top: 2px solid var(--primary-text-color); */
 }
 
 .footer-left {
