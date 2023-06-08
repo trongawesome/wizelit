@@ -101,7 +101,7 @@
 
 .right-sticky-wrapper {
     position: sticky;
-    bottom: 28px;
+    top: 28px;
 }
 
 .gh-content a.sticky-wrapper {
