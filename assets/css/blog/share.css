@@ -46,15 +46,22 @@
     transition: fill .15s var(--ease-in-out-quad);
 }
 
-.share-link .icon-facebook {
-    margin-right: 0.2rem;
-    margin-left: -0.3rem;
-}
+@media (max-width: 767px) {
+    .share {
+        flex-direction: row;
+        width: auto;
+        justify-content: center;
+    }
+    .share-link {
+        margin: 0.8rem;
+    }
+    .share-label {
+        writing-mode: horizontal-tb;
+        margin: 0 .8rem;
+    }
 
-.share-link-facebook {
-    /* color: var(--facebook-color); */
-}
+    .gh-content .right-sidebar-container-post {
+        display: none;
+    }
 
-.share-link-twitter {
-    /* color: var(--twitter-color); */
 }

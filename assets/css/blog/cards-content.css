@@ -57,9 +57,9 @@
 /* sticky */
 
 .kg-canvas .left-sidebar-container {
-    bottom: 0;
-    font-size: 1.4rem;
     grid-column: wide-start/main-start;
+    font-size: 1.4rem;
+    bottom: 0;
     grid-row-start: 1;
     margin: 0;
     padding: 0 3rem 0 0;
@@ -71,6 +71,15 @@
 .kg-canvas .right-sidebar-container {
     grid-column: main-end/wide-end;
     position: relative;
+}
+
+.kg-canvas .right-sidebar-container-post {
+    grid-column: main-end/wide-end;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .right-sidebar-wrap {
@@ -124,6 +133,11 @@
         position: relative;
         padding: 0;
         grid-row-start: 2;
+    }
+
+    .kg-canvas .right-sidebar-container-post {
+        grid-column: main-start/main-end;
+        position: relative;
     }
 
     .sticky-wrapper {

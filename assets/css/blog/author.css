@@ -10,6 +10,29 @@
 .author-social {
     justify-content: center;
     margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    margin: 0.6rem;
+    padding: 8px 12px;
+    color: var(--dark-gray-color);
+    font-size: 1.6rem;
+    line-height: 0;
+    font-weight: 800;
+    letter-spacing: 0.04rem;
+    border-radius: 8px;
+    border: 1px solid var(--mid-gray-color);
+}
+
+.social-link .icon {
+    margin-right: 0.8rem;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
 }
 
 .author-list {
