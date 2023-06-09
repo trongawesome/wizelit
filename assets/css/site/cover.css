@@ -54,11 +54,20 @@
     margin-bottom: 80px;
 }
 
-.cover-description {
+.cover-header {
     font-size: 7rem;
     line-height: 1.1;
     font-weight: 700;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.cover-sub-header {
+    font-size: 2.2rem;
+    line-height: 1.5;
+    margin: 2rem 0 3.2rem 0;
+    font-weight: 400;
+    text-align: center;
 }
 
 .cover-description-subtext {
@@ -74,6 +83,7 @@
     line-height: 1.5;
     margin-top: 1rem;
     opacity: .8;
+    text-align: center;
 }
 
 .has-serif-title .cover-description,
@@ -82,7 +92,8 @@
 }
 
 .has-serif-body .cover-description-subtext,
-.has-serif-body .cover-description-smalltext {
+.has-serif-body .cover-description-smalltext,
+.has-serif-body .cover-sub-header {
     font-family: var(--font-serif);
 }
 
@@ -116,6 +127,7 @@
 .inline-form {
     max-width: 480px;
     width: 100%;
+    margin: auto;
 }
 
 
@@ -214,7 +226,7 @@
 
 
 @media (max-width: 767px) {
-    .cover-description {
+    .cover-header {
         font-size: 5.2rem;
         margin-top: 40px;
     }
