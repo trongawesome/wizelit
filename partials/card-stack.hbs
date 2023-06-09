@@ -1,10 +1,4 @@
 <div class="card-stack-wrapper">
-    <div class="stack-text-wrap">
-        <h3 class="card-title">
-            {{name}}
-        </h3>
-        <p class="card-small-text">{{plural count.posts empty='books' singular='% book' plural='% books'}}</p>
-    </div>
     <div class="card-stack-wrapper-inner">
         {{#get "posts" filter="tag:{{slug}}" limit="3"}}
             {{#foreach posts}}
@@ -12,11 +6,7 @@
                     {{#if feature_image}}
                         <div class="u-placeholder vertical">
                             <img class="u-object-fit"
-                                {{!-- srcset="{{> srcset}}" --}}
-                                srcset="{{img_url feature_image size="s" format="webp"}} 400w,
-                                        {{img_url feature_image size="m" format="webp"}} 750w"
-                                sizes="(min-width: 992px) 400px, (min-width: 768px) 300px, 200px"
-                                src="{{img_url feature_image size="m"}}"
+                                src="{{img_url feature_image size="xs"}}"
                                 alt="{{title}}" loading="lazy">
                         </div>
                     {{else}}
@@ -25,6 +15,12 @@
                 </div>
             {{/foreach}}
         {{/get}}
+    </div>
+    <div class="stack-text-wrap">
+        <h3 class="card-title">
+            {{name}}
+        </h3>
+        <p class="card-small-text">{{plural count.posts empty='books' singular='% book' plural='% books'}}</p>
     </div>
     <a class="u-permalink" href={{url}} aria-label="{{title}}"></a>
 </div>

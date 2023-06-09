@@ -156,7 +156,6 @@ blockquote.kg-blockquote-alt::after {
 
 .kg-grid-2col {
     grid-template-columns: 1fr 1fr;
-    align-items: center;
 }
 
 .kg-grid-2col-shortleft {
@@ -280,6 +279,9 @@ blockquote.kg-blockquote-alt::after {
     }
     .kg-grid-3col {
         grid-template-columns: 1fr 1fr;
+    }
+    .page-tags .kg-grid-3col {
+        grid-template-columns: 1fr;
     }
     .kg-grid-book-col {
         grid-template-columns: repeat(2, 1fr);
