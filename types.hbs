@@ -8,7 +8,7 @@
         <div class="kg-canvas">
             <div class="kg-width-wide">
                 <div class="kg-grid kg-grid-3col">
-                    {{#get "tags" limit="24" filter="tag:-[blog,collections]" include="count.posts" order='count.posts desc'}}
+                    {{#get "tags" limit="24" filter="slug:-[blog,collections]" include="count.posts" order='count.posts desc'}}
                         {{#foreach tags}}
                             {{> card-stack}}
                         {{/foreach}}
