@@ -57,10 +57,10 @@
         {{/author}}
 
         <div class="kg-canvas">
-            <div class="kg-width-wide">
-                <div class="post-feed kg-grid kg-grid-3col">
+            <div class="kg-width-content u-not-archive">
+                <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}}">
                     {{#foreach posts}}
-                        {{> card-horizontal}}
+                        {{> loop-archive no_date=true}}
                     {{/foreach}}
                 </div>
                 {{pagination}}

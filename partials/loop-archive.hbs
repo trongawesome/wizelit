@@ -1,9 +1,10 @@
 <article class="feed-card feed {{post_class}} post-year-{{date format="Y"}} post-date-{{date format="M"}} archive-wrapper" data-month="{{date format="MMMM YYYY"}}">
-    
-    <div class="date-wrapper">
-        <div class="year-post-label">{{date format="YYYY"}}</div>
-        <div class="month-post-label"> / {{date format="MMM YYYY"}}</div>
-    </div>
+    {{#unless no_date}}
+        <div class="date-wrapper">
+            <div class="year-post-label">{{date format="YYYY"}}</div>
+            <div class="month-post-label"> / {{date format="MMM YYYY"}}</div>
+        </div>
+    {{/unless}}
     
     <div class="feed-card-inside">
         {{#match @custom.feed_layout "!=" "Text-only"}}
