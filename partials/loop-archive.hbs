@@ -35,6 +35,18 @@
             {{#if excerpt}}
                 <div class="feed-excerpt">{{excerpt words="20"}}</div>
             {{/if}}
+            {{#match authors.length ">" 1}}
+                <div class="author-list-book">
+                    {{#foreach authors from="2" to="5"}}
+                        <div class="author-image-placeholder u-placeholder square">
+                            {{#if profile_image}}
+                                <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
+                            {{/if}}
+                        </div>
+                    {{/foreach}}
+                    <span class="author-counter-label">{{authors.length}} titans</span>
+                </div>
+             {{/match}}
         </div>
         <a class="u-permalink" href="{{url}}" aria-label="{{title}}"></a>
     </div>
