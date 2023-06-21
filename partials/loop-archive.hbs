@@ -10,7 +10,7 @@
         {{#match @custom.feed_layout "!=" "Text-only"}}
             {{#match @custom.feed_layout "!=" "Minimal"}}
                 {{#if feature_image}}
-                    <div class="feed-image u-placeholder vertical">
+                    <div class="feed-image u-placeholder vertical {{#if blog}} square {{/if}}">
                             <img class="u-object-fit"
                                 srcset="{{img_url feature_image size="xs" format="webp"}} 150w,
                                         {{img_url feature_image size="s" format="webp"}} 400w"

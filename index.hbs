@@ -75,13 +75,45 @@
             </section>
         {{/if}}
 
-        {{#if @custom.tag_slugs_for_list_collection}}
+        {{#if @custom.book_list_title}}
             <section class="book-list">
                 <div class="kg-canvas">
                     <div class="section-text">
                             <h2 class="cover-section-title">{{@custom.book_list_title}}</h2>
                         {{#if @custom.book_list_desc}}
                             <p class="cover-description-subtext">{{@custom.book_list_desc}}</p>
+                        {{/if}}
+                    </div>
+                </div>
+                <div class="kg-canvas expanded">
+                    {{#get "posts" filter="tag:collections" limit="6"}}
+                        <div class="blog-feed book-list-content post-feed kg-grid kg-grid-3col kg-width-wide">
+                            {{#foreach posts}}
+                                {{> "card"}}
+                            {{/foreach}}
+                        </div>
+                    {{/get}}
+                </div>
+                <div class="kg-canvas">
+                    <div>
+                        <a class="button button-secondary"
+                                href="/collections/"
+                                rel="noopener noreferrer" aria-label="View all books">
+                            <span class="default">View All</span>
+                            {{> icons/arrow-right}}
+                        </a>
+                    </div>
+                </div>
+            </section>
+        {{/if}}
+
+        {{#if @custom.tag_slugs_for_list_collection}}
+            <section class="book-list">
+                <div class="kg-canvas">
+                    <div class="section-text">
+                            <h2 class="cover-section-title">{{@custom.book_category_title}}</h2>
+                        {{#if @custom.book_list_desc}}
+                            <p class="cover-description-subtext">{{@custom.book_category_desc}}</p>
                         {{/if}}
                     </div>
                 </div>

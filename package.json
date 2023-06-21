@@ -72,15 +72,24 @@
                 "type": "text",
                 "group": "homepage"
             },
-            "tag_slugs_for_list_collection": {
-                "type": "text",
-                "group": "homepage"
-            },
             "book_list_title": {
                 "type": "text",
                 "group": "homepage"
             },
             "book_list_desc": {
+                "type": "text",
+                "group": "homepage"
+            },
+            "book_category_title": {
+                "type": "text",
+                "group": "homepage",
+                "default": "Books by Category"
+            },
+            "book_category_desc": {
+                "type": "text",
+                "group": "homepage"
+            },
+            "tag_slugs_for_list_collection": {
                 "type": "text",
                 "group": "homepage"
             },
