@@ -7,6 +7,7 @@
 .tag-hash-not-book .kg-card.kg-bookmark-card a.kg-bookmark-container:hover {
     border: none;
     overflow: visible;
+    flex-direction: row-reverse;
 }
 
 .kg-card.kg-bookmark-card a.kg-bookmark-container {
@@ -14,7 +15,7 @@
 }
 
 .tag-hash-not-book .kg-bookmark-card .kg-bookmark-content {
-    padding: 0 20px 0 0;
+    padding: 0 0 0 20px;
 }
 
 .tag-hash-not-book .kg-bookmark-card .kg-bookmark-title {
